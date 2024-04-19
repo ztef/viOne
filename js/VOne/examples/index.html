@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VOne Test</title>
+
+	<style>
+		body, html {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+
+	<script src="javascript/libs/d3.min.js"></script>
+
+	<script type='text/javascript' src='javascript/libs/three.min.js'></script>
+	<script type='text/javascript' src='javascript/libs/TrackballControls.js'></script>
+	<script type='text/javascript' src='javascript/libs/CSS3DRenderer.js'></script>
+
+
+	<script type='text/javascript' src='../dist/VOne.js'></script>
+</head>
+<body>
+
+	<script type='text/javascript'>
+
+
+
+		var data, scene;
+
+		var ds;
+
+
+		loadJSON('data/testData.json', function(response){
+
+			var testData = JSON.parse(response);
+
+
+			data = d3.nest().key(function(d){return d.company}).key(function(d){return d.gender}).entries(testData);
+
+
+			init();
+
+
+		});
+
+
+
+		function init(){
+
+
+			// Declarando creador de escenas -->
+			var sceneCreator = new VOne.SceneCreator();
+
+			// Instanciando un creador de escenas con parametros de default + controls + tipo de renderer -->
+			scene = sceneCreator.createScene({ controls: THREE.TrackballControls, glRenderer: THREE.WebGLRenderer, bgColor: 0x51008b });
+
+			console.log(scene);
+
+			// Instanciando calculador de posiciones -->
+			ds = VOne.RadialDistribution();
+
+
+			var dataModel = ds.data(data) // seteo de datos para calculador de posiciones.
+				.generateDistribution({  }) //  generando la distribucion con parametros de default.
+				.attachToScene({  }, scene, 'employees'); // enviando el resultado a la escena creada.
+
+
+
+			dataModel.setInteraction('onMouseOver', function(element){ console.log(element) }); // seteando acciones para el mouseover.
+
+			dataModel.setInteraction('onMouseOut', function(element){ console.log('mouseOut ' + element) }); // seteando acciones para mouseout.
+
+			// Aqui podria ponerse un dataModel.setInteraction('onClick', function(element){ hacer lo que se quiera ante un evento clic sobre la particula; });
+
+
+			scene.registerInteractiveBufferGeometry(dataModel); // registrando el data model que creo el generador de distribuciones para que interactue con el raycaster
+
+
+		}
+
+
+
+
+	</script>
+
+</body>
+</html>

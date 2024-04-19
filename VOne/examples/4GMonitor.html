@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Services Monitor</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<link rel="shortcut icon" href="imagenes/favicon-02.png">
+
+
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+
+<script src="javascript/libs/d3.min.js"></script>
+
+<script type="text/javascript" src="javascript/libs/three.min.js"></script>
+<script type="text/javascript" src="javascript/libs/CSS3DRenderer.js"></script> 
+<script type='text/javascript' src='javascript/libs/TrackballControls.js'></script>
+<script src="https://dl.dropboxusercontent.com/u/3587259/Code/Threejs/OrbitControls.js"></script>
+
+
+<script type='text/javascript' src='../dist/VOne.js'></script>
+
+
+
+<style type="text/css" media="screen">
+
+body{
+	background-color: #404040;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body >
+
+<div id="graficaLateral" width="100%"  heigth="100%">
+	
+</div>
+
+<div id="graficaFrontal" width="100%"  heigth="100%">
+	
+</div>
+
+
+
+
+<script type="text/javascript">
+
+var camera, scene, renderer;
+
+var controls;
+
+var sceneBack;
+
+var sceneGL;
+
+var sceneFront;
+
+var svgMainFrontal;
+
+var svgMainPosterior;
+
+//	2/03/16, 13:00
+var format = d3.time.format("%d/%m/%Y %H:%M");
+
+var colorEstatus=d3.scale.linear().domain([80,90,92,95,97,100]).range(["#FF00FB","#FF000D","#FFDD00","#BBFF00","#0DFF00","#00FFA6"]);
+
+var graficaFrontal3D;
+var graficaLateral3D;
+
+var model_geom=new Object();
+
+var width = window.innerWidth*.98,
+    height = window.innerWidth*.98;
+
+var bufferGeometryMaterial;
+
+$(function() { 
+
+	bufferGeometryMaterial = new THREE.ShaderMaterial({
+
+		uniforms: uniforms,
+		vertexShader: geckoShaders.vertex,
+		fragmentShader: geckoShaders.fragment
+
+		});
+
+	initEscena();
+
+});
+
+function initEscena () {
+
+        // Declarando creador de escenas -->
+		var sceneCreator = new VOne.SceneCreator();          
+      
+        // Instanciando un creador de escenas con parametros de default + controls + tipo de renderer -->
+		//Setea CanvasRenderer Grafica Posterior
+		sceneBack = sceneCreator.createScene({ bgColor:"#00FF00", bgAlpha:0.0, glRenderer: THREE.CSS3DRenderer, width:width, height:height,controls: THREE.OrbitControls, parentType:"div", containerId:"svgGraficaPosterior"  });
+
+       
+		//Setea WEGLJRenderer
+		sceneGL = sceneCreator.createScene({ bgColor:"#000000", bgAlpha:0.01, glRenderer: THREE.WebGLRenderer, useControls: sceneBack.controls , camera:sceneBack.camera,width:width, height:height,controls: THREE.OrbitControls, parentType:"div", containerId:"webglContainer"  });
+
+		
+		 //Setea CanvasRenderer Grafica Frontal
+		sceneFront = sceneCreator.createScene({ bgColor:"#FF0000", bgAlpha:0.0,glRenderer: THREE.CSS3DRenderer,useControls: sceneBack.controls , camera:sceneBack.camera,  width:width, height:height, parentType:"div", containerId:"svgGraficaFrontal"  });
+
+
+		svgMainFrontal = d3.select("#graficaFrontal").append("svg")   
+				    .attr("id", "svgMainFrontal")
+				    .style("border-style", "solid")
+				    .style("border-width", "3")
+				    .style("border-color", "white");
+
+
+		svgMainPosterior = d3.select("#graficaLateral").append("svg")				    
+				    .attr("id", "svgMainPosterior")
+				    .style("border-style", "solid")
+				    .style("border-width", "3")
+				    .style("border-color", "white");
+		
+
+
+		//Encuadra las ventanas del DOM 
+		$("#svgGraficaFrontal").css("position","fixed");
+		$("#svgGraficaFrontal").css("float","left");
+		$("#svgGraficaFrontal").css("top","5px");
+		$("#svgGraficaFrontal").css("left","5px");
+		$("#svgGraficaFrontal").css("pointer-events","none");
+
+
+		$("#svgGraficaPosterior").css("position","fixed");
+		$("#svgGraficaPosterior").css("float","left");
+		$("#svgGraficaPosterior").css("top","5px");
+		$("#svgGraficaPosterior").css("left","5px");		
+		
+
+		$("#webglContainer").css("position","fixed");
+		$("#webglContainer").css("top","5px");
+		$("#webglContainer").css("left","5px");		
+		$("#webglContainer").css("pointer-events","none");
+		
+
+		//Declara DIVS del DOM que seran objetos 3D
+		
+		graficaFrontal3D = new THREE.CSS3DObject( $("#graficaFrontal")[0] );
+		
+        sceneFront.add( graficaFrontal3D );
+
+
+
+        graficaLateral3D = new THREE.CSS3DObject( $("#graficaLateral")[0] );
+		
+        sceneBack.add( graficaLateral3D );
+		
+		CargaDatos();
+
+}
+
+
+function CargaDatos(){
+
+    d3.csv("DocumentosReferencia/SiteData.csv")
+    .row(function(d) { return d; })
+    .get(function(error, rows) {  
+
+    	for(var i=0;i<rows.length;i++){    		
+
+    		//Agrega objeto tipo Fecha a los datos Fuente
+    		rows[i].Fecha=rows[i].Fecha.replace("/16,", "/2016,");
+    		rows[i].Fecha=rows[i].Fecha.replace(",", ""); 
+
+    		rows[i].date = format.parse(rows[i].Fecha);
+
+    	}
+
+    	data = d3.nest().key(function(d){return d.Nombre}).key(function(d){return d.Fecha}).entries(rows);
+
+    	console.log("data",data);
+
+    	//DIBUJA LOS CILINDROS:
+    	//BARRE LOS SITIOS:
+    	var widthGained=0;
+    	var heightGained=0;
+    	var deepGained=0;
+
+    	var offSetAncho=900;
+    	var offSetAlto=450;
+    	var offSetProfundidad=950;
+
+    	var geomArr=[];
+
+        for(var i=0;i<2;i++){
+       	//for(var i=0;i<data.length;i++){
+
+        		var Sitio=data[i].key;
+
+        		var alto=i*offSetAlto;
+				heightGained=alto;	
+
+	        	//BARRE LAS FECHAS:
+	        	for(var j=0;j<2;j++){
+	        	//for(var j=0;j<data[i].values.length;j++){
+
+	        			var deepGained=j*offSetProfundidad;
+
+	        			var fecha=data[i].values[j].key;
+
+	        			var svg2=d3.select("#svgMainPosterior");
+						            svg2.attr("width", deepGained+offSetProfundidad);          
+						            svg2.attr("height", heightGained+offSetAlto*2);
+
+	        			svg2.append("line")						            	
+						            	.attr("x1",deepGained)
+						            	.attr("y1",alto+offSetAlto)
+						            	.attr("x2",deepGained)
+						            	.attr("y2",(alto+offSetAlto)+150)
+						            	.attr("stroke","blue")
+						            	.attr("stroke-width","3");
+
+	        			//BARRE CADA REGISTRO:
+	        			var caso=0;
+	        			
+	        			for(var e in data[i].values[j].values[0]){
+
+	        					if(e != "Nombre"  &&  e != "Fecha" &&  e != "date"){
+
+						            var cilindroGeom=new THREE.CylinderGeometry( 3, 3, offSetProfundidad,8);
+						            
+
+							        cilindroGeom.faces.forEach(function(face, index){
+
+						            	face.color = new THREE.Color('rgb(250, 250, 250)');						            
+
+						            });
+
+						            cilindroGeom.colorsNeedUpdate = true;
+						            
+						            var cilindro = new THREE.Mesh(cilindroGeom ,bufferGeometryMaterial );
+
+						            var ancho=caso*offSetAncho;
+						            widthGained=ancho;	
+
+
+						            var svg=d3.select("#svgMainFrontal");
+						            svg.attr("width", widthGained+offSetAncho*2);          
+						            svg.attr("height", heightGained+offSetAlto*2);						            
+
+						            cilindro.position.set(ancho+offSetAncho,alto-offSetAlto,deepGained);
+
+						            cilindro.rotation.x=90*(Math.PI/180);
+
+						            sceneGL.add(cilindro,"cil_"+i);
+
+						            //Genera el data set de cada geometria y los referencia mutuamente
+						            //generaID:					            
+
+						            var tipo=e.replace(" ", "_");
+						            var id=data[i].values[j].values[0].Nombre+"_"+tipo+"_"+String(data[i].values[j].values[0].date.getTime())
+						            
+						            model_geom[id]=new Object();
+						            model_geom[id].mesh=cilindro;
+						            model_geom[id].data= data[i].values[j].values[0];
+
+						            cilindro.id=id;
+
+						            //Define el modelo para que sea interactivo
+						            geomArr.push(cilindro);
+
+
+
+						            //Crea Circulos de Lectura en el SVG:
+						            //Circulo que muestra el color segun el estatus 
+						            svg.append("circle")
+						            	.attr("r",150)
+						            	.attr("cx",ancho+offSetAncho)
+						            	.attr("cy",alto+offSetAlto)
+						            	.attr("fill","red");
+
+
+						            caso++;
+
+					        	}
+
+				        }
+
+
+				        
+
+		        }
+
+        }
+
+        var model = new VOne.GeometryModel('test', geomArr);
+
+        				            
+			sceneGL.registerInteractiveGeometry(model);
+
+
+			model.setInteraction('onMouseOver', function(mesh){ 
+					
+			 	console.log(mesh);
+
+			 });
+
+
+        //Ajusta posicion X y Y para centrar Panel SVG
+        graficaLateral3D.position.x=0+offSetAncho;
+        graficaLateral3D.position.y=(heightGained/2)-offSetAlto;
+        graficaLateral3D.position.z=deepGained/2;
+
+        graficaLateral3D.rotation.y=toRadians(90);
+
+        graficaFrontal3D.position.x=(widthGained/2)+offSetAncho;
+        graficaFrontal3D.position.y=(heightGained/2)-offSetAlto;
+        graficaFrontal3D.position.z=deepGained+(offSetProfundidad/2);
+
+
+    });
+
+}
+
+var geckoShaders = {
+
+					vertex: [
+
+
+					'attribute vec3 color;',
+
+
+					'varying vec3 vColor;',
+
+					'void main() {',
+
+					'vColor = color;',
+					
+					'vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );',
+
+					'gl_Position = projectionMatrix * mvPosition;',
+
+					'}'
+
+
+					].join('\n'),
+
+
+					fragment: [
+
+					'uniform vec3 colorUniform;',
+
+					'varying vec3 vColor;',
+
+					'void main() {',
+
+					'gl_FragColor = vec4( colorUniform * vColor, 1.0 );',
+
+
+					'}'
+
+
+					].join('\n')
+
+					}
+var uniforms = {
+
+		colorUniform: { type: "c", value: new THREE.Color( 0xffffff ) }
+
+};
+
+
+document.onkeydown = function(event) {   
+    switch (event.keyCode) {
+        case 49: 
+
+            
+
+        break;
+
+    }
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

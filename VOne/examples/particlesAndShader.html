@@ -1,0 +1,172 @@
+§<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+	<title>VOne shader/particles Test</title>
+
+	<script type='text/javascript' src='javascript/libs/three.min.js'></script>
+	<script type='text/javascript' src='javascript/libs/TrackballControls.js'></script>
+	<script type='text/javascript' src='javascript/libs/CSS3DRenderer.js'></script>
+
+
+	<script type='text/javascript' src='../dist/VOne.js'></script>
+</head>
+<body>
+
+	<script type='text/javascript'>
+
+		var data, scene;
+
+		var ds;
+
+
+		loadJSON('data/testData.json', function(response){
+
+			data = JSON.parse(response);
+
+			init();
+
+
+		});
+
+		var geometryModel, particles;
+
+		var basicAnimation = new VOne.Animation();
+
+
+		function init(){
+
+
+			// Declarando creador de escenas -->
+			var sceneCreator = new VOne.SceneCreator();
+
+			// Instanciando un creador de escenas con parametros de default + controls + tipo de renderer -->
+			scene = sceneCreator.createScene({ controls: THREE.TrackballControls, glRenderer: THREE.WebGLRenderer, bgColor: 0x51008b, raycastThreshold: 35, useTweenAnimations: true });
+
+
+			// Instanciando generador de bufferGeometries y asignando posiciones, colores, tamanos y alfa.
+			var geometriesGenerator = new VOne.GenericBufferGeometriesGenerator();
+
+			geometriesGenerator.setModel(data)
+
+				.setPosition(function(v){  // v - representa cada objeto del arreglo
+
+					var x = Math.random() * 30000 - 15000;
+					var y = Math.random() * 25000 - 12500;
+					var z = Math.random() * 20000 - 10000;
+
+					return new THREE.Vector3(x, y, z);
+
+				})
+
+				.setSize(function(v){ 	// v - representa cada objeto del arreglo
+					return Math.random() * 500;
+				})
+
+				.setAlpha(function(v){ 	// v - representa cada objeto del arreglo
+					return Math.random();
+				})
+
+				.setColor(function(v){ 	// v - representa cada objeto del arreglo
+					var hue = Math.random() * 360;
+					return new THREE.Color('hsl(' + hue + ', 100%, 50%)');
+				});
+
+
+			geometryModel = geometriesGenerator.generate();
+
+			console.log(geometryModel);
+
+
+
+			var shadersCreator = new VOne.ShaderCreator();
+
+			var shader = shadersCreator.createShader(
+				{
+					color: 'color',
+					size: 'size',
+					points: true,
+					useTexture: 'sprites/whiteSphere.png',
+					alpha: 'alpha'
+				});
+
+			console.log(shader);
+
+
+			var bufferGeometryMaterial = new THREE.ShaderMaterial({ // Generando el material con lo entregado por el shader creator y unas propiedades mas. el transparent es importante para que agarre el alpha. THREE.js escribe mas cosas en los programas del shader, no pasa integro el GLSL que general el shader creator. De ahi que sea importante ponerle el transparent: true (ademas del fondo de la imagen).
+
+				uniforms: shader.uniforms,
+				vertexShader: shader.vertexShader,
+				fragmentShader: shader.fragmentShader,
+
+				blending: THREE.AdditiveBlending,
+				depthTest: true,
+
+				transparent: true
+
+
+			});
+
+			particles = new THREE.Points(geometryModel.geometry, bufferGeometryMaterial);
+
+			scene.add(particles);
+
+
+			geometryModel.setMesh(particles);
+
+
+
+
+
+			geometryModel.setInteraction('onMouseOver', function(element, index){
+
+				element.originalSize = element.size;
+
+				basicAnimation.pointsBasicAnimation(particles, index, VOne.ScaleAnimation, 900, 100);
+
+
+			}); // seteando acciones para el mouseover.
+
+			geometryModel.setInteraction('onMouseOut', function(element, index){
+
+				basicAnimation.pointsBasicAnimation(particles, index, VOne.ScaleAnimation, element.originalSize, 100);
+
+			}); // seteando acciones para mouseout.
+
+			scene.registerInteractiveBufferGeometry(geometryModel);
+
+
+		}
+
+
+
+
+
+		function animatePositions(){
+
+			for(var i = 0; i < 7000; i++){
+
+				var x = Math.random() * 30000 - 15000;
+				var y = Math.random() * 25000 - 12500;
+				var z = Math.random() * 20000 - 10000;
+
+
+				basicAnimation.pointsBasicAnimation(particles, i, VOne.PositionAnimation, new THREE.Vector3(x, y, z), 500);
+
+			}
+
+
+		}
+
+
+
+	</script>
+
+
+	<div style="position: fixed; top: 1em; left: 1em">
+
+		<button onclick="animatePositions();" >Animate Positions</button><br/>
+
+	</div>
+
+</body>
+</html>

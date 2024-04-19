@@ -1,0 +1,10 @@
+{
+	"name":"VOne",
+	"description":"The Visualization-One core lib.",
+	"version":"1.1.1",
+	"url":"geckode.mx/VOneDocs/",
+	"logo":"/resources/Logo-VOne-Final.png",
+	"options":{
+		"outdir":"../docs"
+	}
+}

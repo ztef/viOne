@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Multiple GL Scenes</title>
+
+        <meta name="keywords" content="selection, materials, animation">
+
+        <style>
+
+            body{
+                margin: 0; padding: 0; height: 100%; width: 100%;
+            }
+
+            body {
+                background-color: #111;
+            }
+
+        </style>
+
+    	<script type="text/javascript" src="javascript/libs/three.min.js"></script>
+    	<script type="text/javascript" src="javascript/libs/TrackballControls.js"></script>
+
+
+    	<script type="text/javascript" src="../dist/VOne.js"></script>
+
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            var sc = new VOne.SceneCreator();
+
+            var particleSize = 25;
+
+            var scenesCount = 10;
+
+            var scenesPerRow = 4;
+
+            var pointsPerScenes = 200;
+
+
+
+
+
+            var rows =  Math.ceil(scenesCount / scenesPerRow);
+
+            var scenesWidthPx = Math.floor(window.innerWidth / scenesPerRow);
+
+            var scenesWidthPct = Math.floor(scenesWidthPx / window.innerWidth * 100);
+
+            var sceneColors = [ 0x8a0808, 0x868A08, 0x088A08, 0x088A68, 0x08298A, 0x4B088A, 0x8A0886 ];
+
+            var colors = [ 'rgb(0,127,255)', 'rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(0,255,255)',
+                               'rgb(255,0,255)', 'rgb(255,0,127)', 'rgb(255,255,0)', 'rgb(0,255,127)' ];
+
+            var index, sceneColor, x, y, z;
+
+            var controlsConfig = {
+        		zoomSpeed: 1.2,
+        		panSpeed: 1.2,
+                rotateSpeed: 1.9,
+        		noZoom: true,
+        		noPan: false,
+        		dynamicDampingFactor: 0.4
+        	};
+
+
+            var displacementFunctions = [
+
+                (x, y, z, t) => {
+					return new THREE.Vector3( Math.sin( t / Math.PI / 2) * 5, 0, 0);
+                },
+
+                (x, y, z, t) => {
+
+                    return new THREE.Vector3(0, Math.cos(t / Math.PI / 2) * 2, 0);
+
+                },
+
+                (x, y, z, t) => {
+
+                    return new THREE.Vector3(0, 0, Math.sin( t / Math.PI / 1.5) * 3);
+
+                }
+
+            ];
+
+
+            for(var i = 0; i < rows; i++){
+
+                for(var j = 0; j < scenesPerRow; j++){
+
+                    index = i * scenesPerRow + j;
+
+                    sceneColor = sceneColors[ index % sceneColors.length ];
+
+                    var scene = sc.createScene({ bgColor: sceneColor, bgAlpha: 0.6, controls: THREE.TrackballControls, parentType: 'div', containerId: 'scene' + j + '_' + i, controlsConfig: controlsConfig });
+
+
+                    var sceneDiv = document.getElementById('scene' + j + '_' + i);
+
+                    sceneDiv.style = 'width:' + scenesWidthPct + '%; float: left; height: 400px; ';
+
+
+
+                   var index = Math.floor( colors.length * Math.random() );
+
+                    var textureCanvas = document.createElement( 'canvas' );
+            			textureCanvas.width = 128;
+            			textureCanvas.height = 128;
+
+        			var context = textureCanvas.getContext( '2d' );
+            			context.arc( 64, 64, 64, 0, 2 * Math.PI );
+            			context.fillStyle = colors[ index ];
+            			context.fill();
+
+        			var texture = new THREE.Texture( textureCanvas );
+        			         texture.needsUpdate = true;
+
+        			var material = new THREE.PointsMaterial( { size: particleSize, map: texture, transparent: true, alphaTest: 0.1 } );
+
+
+                    var geometry = new THREE.Geometry();
+
+
+                    for(var k = 0; k < pointsPerScenes; k++){
+
+                        x = Math.random() * 500 - 250;
+                        y = Math.random() * 300 - 150;
+                        z = Math.random() * 500 - 250;
+
+                        geometry.vertices.push(new THREE.Vector3(x, y, z));
+
+                    }
+
+                    scene.add(new THREE.Points(geometry, material));
+
+                    scene.setCameraPosition(0, 0, 1000);
+
+                    scene.t = 0;
+
+                    scene.t.ascending = true;
+
+                    var displacementFunctionIndex = index % displacementFunctions.length;
+
+                    var displacementFunction = displacementFunctions[ index % displacementFunctions.length];
+
+                    var onRender = function(params){
+
+                        for(var l = 0; l < pointsPerScenes; l++){
+
+                            var v0 = params.geometry.vertices[l];
+    						var v = params.displacementFunction( v0.x, v0.y, v0.z, scene.t/5 );
+    						params.geometry.vertices[l].set( v.x + v0.x, v.y + v0.y, v.z + v0.z );
+
+                        }
+
+                        params.geometry.verticesNeedUpdate = true;
+
+                        if(scene.t === 5)
+                            scene.t.ascending = false;
+
+
+                        if(scene.t === -5)
+                            scene.t.ascending = true;
+
+                        if(scene.t.ascending)
+                            scene.t ++;
+
+                        else {
+                            scene.t --;
+                        }
+
+                    };
+
+
+                    scene.setOnRender(onRender, {geometry: geometry, displacementFunction: displacementFunction});
+
+                }
+
+
+            }
+
+
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+    
+  
+  .editor-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 30%; /* Adjust the width as needed */
+  }
+  
+  textarea {
+    flex-grow: 1;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  iframe {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>VOne - Labels 3D</title>
+
+        <meta name="keywords" content="Label3D, removeObject, setOnRender">
+
+        <style>body{ margin: 0; padding: 0; }</style>
+
+    	<script type="text/javascript" src="javascript/libs/three.min.js"></script>
+    	<script type="text/javascript" src="javascript/libs/TrackballControls.js"></script>
+        <script type="text/javascript" src="../dist/VOne.js"></script>
+    </head>
+    <body>
+
+        <script>
+
+            let sc = new VOne.SceneCreator();
+
+            let scene = sc.createScene({ controls: THREE.TrackballControls, glRenderer: THREE.WebGLRenderer, bgColor:  0x51008b, useTweenAnimations: true, parentType: 'div' });
+
+            scene.setCameraPosition(0, 0, 400);
+
+            let clock = new THREE.Clock();
+
+            function createAndAddLabel(text){
+
+                let label = new VOne.Label3D(text, { textColor: { r: 255, g: 255, b: 5, a: 0.9 }, fontFace: "Arial-Black, Geneva, sans-serif", fontSize: 36, textAlign: 'center' });
+
+                scene.add(label, 'voneLabel');
+
+            }
+
+            createAndAddLabel('VOne, now a Framework!');
+
+
+            function updateText(value){
+
+                scene.removeObject('voneLabel');
+
+                let label = new VOne.Label3D(value, { textColor: { r: 255, g: 255, b: 5, a: 0.9 }, fontFace: "Arial-Black, Geneva, sans-serif", fontSize: 36, textAlign: 'center' });
+
+                scene.add(label, 'voneLabel');
+
+            }
+
+
+            var rotateText = function() {
+
+                var label = scene.getObject('voneLabel');
+
+                var delta = clock.getDelta();
+
+                label.rotateY(delta);
+
+            };
+
+            scene.setOnRender(rotateText);
+
+        </script>
+
+        <div style="position: fixed; top: 50px; left: 0; z-index: 2; background-color: rgba(0, 0, 0, 0.3);">
+            <input type="text" placeholder="VOne, now a Framework!" style="font-size: 1.2em; background-color: rgba(0, 0, 0, 0.5); color: #ccc; border-top-right-radius: 0.5em; border-bottom-right-radius: 0.5em;" size="25" value="VOne, now a Framework!" onkeyup="updateText(this.value);"/>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VOne - VOne</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../resources/Logo-VOne-Final.png" title="VOne"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.1.1</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/THREE.Mesh.html">THREE.Mesh</a></li>
+                                <li><a href="../classes/VOne.html">VOne</a></li>
+                                <li><a href="../classes/VOne.Animation.html">VOne.Animation</a></li>
+                                <li><a href="../classes/VOne.BackgroundModelGenerator.html">VOne.BackgroundModelGenerator</a></li>
+                                <li><a href="../classes/VOne.BufferGeometryModel.html">VOne.BufferGeometryModel</a></li>
+                                <li><a href="../classes/VOne.CPSBufferGeometriesGenerator.html">VOne.CPSBufferGeometriesGenerator</a></li>
+                                <li><a href="../classes/VOne.DeathSphere.html">VOne.DeathSphere</a></li>
+                                <li><a href="../classes/VOne.GenericBufferGeometriesGenerator.html">VOne.GenericBufferGeometriesGenerator</a></li>
+                                <li><a href="../classes/VOne.GeometryModel.html">VOne.GeometryModel</a></li>
+                                <li><a href="../classes/VOne.Graph.html">VOne.Graph</a></li>
+                                <li><a href="../classes/VOne.GraphEdge.html">VOne.GraphEdge</a></li>
+                                <li><a href="../classes/VOne.GraphNode.html">VOne.GraphNode</a></li>
+                                <li><a href="../classes/VOne.HexGrid.html">VOne.HexGrid</a></li>
+                                <li><a href="../classes/VOne.Label3D.html">VOne.Label3D</a></li>
+                                <li><a href="../classes/VOne.LeapGrabControls.html">VOne.LeapGrabControls</a></li>
+                                <li><a href="../classes/VOne.LogScale.html">VOne.LogScale</a></li>
+                                <li><a href="../classes/VOne.PieSlice.html">VOne.PieSlice</a></li>
+                                <li><a href="../classes/VOne.Polygon.html">VOne.Polygon</a></li>
+                                <li><a href="../classes/VOne.PreparedBufferGeometryModel.html">VOne.PreparedBufferGeometryModel</a></li>
+                                <li><a href="../classes/VOne.RadialDistribution.html">VOne.RadialDistribution</a></li>
+                                <li><a href="../classes/VOne.RelationshipBufferGeometriesGenerator.html">VOne.RelationshipBufferGeometriesGenerator</a></li>
+                                <li><a href="../classes/VOne.SceneCreator.html">VOne.SceneCreator</a></li>
+                                <li><a href="../classes/VOne.Selection.html">VOne.Selection</a></li>
+                                <li><a href="../classes/VOne.ShaderCreator.html">VOne.ShaderCreator</a></li>
+                                <li><a href="../classes/VOne.ThreeSceneManager.html">VOne.ThreeSceneManager</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1>VOne Class</h1>
+<div class="box meta">
+
+
+
+
+</div>
+
+
+<div class="box intro">
+    
+</div>
+
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods">
+                            <li class="index-item method">
+                                <a href="#method_assignLevelData">assignLevelData</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_circlePackLayout">circlePackLayout</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_fibSphere">fibSphere</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_halfTube">halfTube</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_select">select</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_spiral">spiral</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_assignLevelData" class="method item">
+    <h3 class="name"><code>assignLevelData</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>data</code>
+                </li>
+                <li class="arg">
+                        <code>config</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Assigns properties for multilevel/multicontained data arrays by traversing the complete array. Allows to set properties for last child elements and calculate total values for parents based on a given child value.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">data</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                        <p>The dataset to assign properties. Must have be in the following format: <br/> [ { keyName: keyname, valuesPropertyName: [values] }, ... { keyName: keyname, valuesPropertyName: [values] } ];</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">config</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>Settings for generating the distribution</p>
+
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">parentPropertyName</code>
+                                    <span class="type">String</span>
+
+                                <div class="param-description">
+                                    <p>The keyName property (parent elements name). Default is 'key'.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">childPropertyName</code>
+                                    <span class="type">String</span>
+
+                                <div class="param-description">
+                                    <p>The values property name to search for for each parent. Default is 'values'.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">setTotalBy</code>
+                                    <span class="type">Function | number</span>
+
+                                <div class="param-description">
+                                    <p>Function to be evaluated | value to assign as totalValue for each last child element. Each parent will contain in the 'totalValue' property the sum of all children assigned values.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">storeTotalValueAs</code>
+                                    <span class="type">String</span>
+
+                                <div class="param-description">
+                                    <p>Used in conjunction with config.setTotalBy, indicates the property name to be assigned for totals. Each parent will hold this property as the sum of this property name of every child. Defaults to 'totalValue'</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">extendRecordsOn</code>
+                                    <span class="type">String</span>
+
+                                <div class="param-description">
+                                    <p>If you want to generate records based on a given property, set this property with the property which value is the amount of records to append. The last child record will be copied as many times this property indicates.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">processLastChildAs</code>
+                                    <span class="type">Function</span>
+
+                                <div class="param-description">
+                                    <p>Function to be executed on every last child record.  The function will receive the record for allowing you to make any aditional calculations and/or set new properties on/for it.</p>
+
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_circlePackLayout" class="method item">
+    <h3 class="name"><code>circlePackLayout</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>data</code>
+                </li>
+                <li class="arg">
+                        <code>config</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Creates a circle packed layout based on calculating a tangent circle for two previus tangent circles.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">data</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                        <p>The dataset to distribute.</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">config</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>Settings for generating the layout</p>
+
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">childPropertyName</code>
+                                    <span class="type">String</span>
+
+                                <div class="param-description">
+                                    <p>The values property name to search for for each parent. Default is 'values'.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">nestedData</code>
+                                    <span class="type">Boolean</span>
+
+                                <div class="param-description">
+                                    <p>Indicates if data is nested. If set to true, childPropertyName must be set (unless child property name is 'values').</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">radiusPropertyName</code>
+                                    <span class="type">String</span>
+
+                                <div class="param-description">
+                                    <p>The name for the property that stores (or will store) the radius on each element. Default is 'radius';</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">setRadius</code>
+                                    <span class="type">Function | Number</span>
+
+                                <div class="param-description">
+                                    <p>A function that will receive each record from the data array for setting its corresponding center position. Must return a number. If not set, it's assumed that a radius property already exists.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">positionPropertyName</code>
+                                    <span class="type">String</span>
+
+                                <div class="param-description">
+                                    <p>The name that will store the center position of each record. Default is 'center'.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">centerX</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>X position for the first element. Default is 0.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">centerY</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>Y position for the first element. Default is 0.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">padding</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>Distance between circles. Default is 0.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">toleranceDistanceFactor</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>Tolerance for meassuring distances between circles to prevent overlapping. Defaults to 0.001</p>
+
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_fibSphere" class="method item">
+    <h3 class="name"><code>fibSphere</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>pointsCount</code>
+                </li>
+                <li class="arg">
+                        <code>startPosition</code>
+                </li>
+                <li class="arg">
+                        <code>radius</code>
+                </li>
+                <li class="arg">
+                        <code>irregular</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Float32Array</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Creates a series of points almost evenly distributed among a sphere surface.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">pointsCount</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <p>Number of points to draw</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">startPosition</code>
+                        <span class="type">THREE.Vector3</span>
+
+
+                    <div class="param-description">
+                        <p>Center of the sphere</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">radius</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <p>Radius for the sphere</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">irregular</code>
+                        <span class="type">Boolean</span>
+
+
+                    <div class="param-description">
+                        <p>If set to true, irregular-like distribution will be used.</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Float32Array</span>:
+                    <p>An array of positions where x = index * 3, y = index * 3 + 1 and z = index * 3 + 2 (An array to be used as position attribute in a buffer geometry).</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_halfTube" class="method item">
+    <h3 class="name"><code>halfTube</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>pointsCount</code>
+                </li>
+                <li class="arg">
+                        <code>center</code>
+                </li>
+                <li class="arg">
+                        <code>config</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Float32Array</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Creates a series of points almost evenly distributed among a partial cilinder surface.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">pointsCount</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <p>Number of points to map</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">center</code>
+                        <span class="type">THREE.Vector3</span>
+
+
+                    <div class="param-description">
+                        <p>Center of the cilinder</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">config</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">height</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>Height of the cilinder. Default is 500.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">radius</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>Radius of the cilinder. Default is 1000;</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">startPhi</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>Starting angle in degress of the partial cilinder. Default is 180.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">endPhi</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>Ending angle in degress of the partial cilinder. Default is 360.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">pointsPerRow</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>Points to draw for each row of points in the cilinder. Default is 12.</p>
+
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Float32Array</span>:
+                    <p>An array of positions where x = index * 3, y = index * 3 + 1 and z = index * 3 + 2 (An array to be used as position attribute in a buffer geometry).</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_select" class="method item">
+    <h3 class="name"><code>select</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>selectOptions</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type"><a href="../classes/VOne.Selection.html" class="crosslink">VOne.Selection</a></span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Selector for meshes added to a THREEJS scene via the @SceneManager.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">selectOptions</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>The mesh(es) name(s) to be searched for. If the mesh of interest has set the <strong>name</strong> property, a '#' sign must be prepended. To search by the name assigned to the mesh when it was added to the scene via the @SceneManager, the selectOption must be prepended by underscore. If a class has been assigned to the mesh of interest, the selectOptions must be prepended by dot. </p><p>Example:<br/>var whiteDotMeshes = VOne.select('.whiteDot'); </p><p> will return an object containing all the meshes that matches the class 'whiteDot'. Also, the oject will contain methods for setting position and scale animation options.</p>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="../classes/VOne.Selection.html" class="crosslink">VOne.Selection</a></span>:
+                    <p>VOne.Selection Object containing all the meshes that matched the select options.</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_spiral" class="method item">
+    <h3 class="name"><code>spiral</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>data</code>
+                </li>
+                <li class="arg">
+                        <code>config</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Creates a spiral layout based on the Archimedes Spiral by assigning a position for each record in the provided data set.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">data</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                        <p>The dataset to distribute.</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">config</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>Settings for generating the layout</p>
+
+                    </div>
+
+                        <ul class="params-list">
+                            <li class="param">
+                                    <code class="param-name">centerX</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>The X center position. Default is 0.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">centerY</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>The Y center position. Default is 0.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">sizePropertyName</code>
+                                    <span class="type">String</span>
+
+                                <div class="param-description">
+                                    <p>The property name for each record. Default is radius. It can be set using config.setSize.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">setSize</code>
+                                    <span class="type">Function |  | Number</span>
+
+                                <div class="param-description">
+                                    <p>A function that can be used to set the radius for each element.<br/> ex: <br/>config: { ..., <br/> setSize: function(element, index) { <br/> return element.total * 6.66; <br/>}, <br/>... } <br/></p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">positionPropertyName</code>
+                                    <span class="type">String</span>
+
+                                <div class="param-description">
+                                    <p>The position property name where the result of each record in the data set will be stored.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">linearPadding</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>Distance between elements along the spiral. Default is 0.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">radialPadding</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>Padding applied each spiral cicle (proportional).</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">z</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>Z position for the spiral. Default is 0.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">looseSpiral</code>
+                                    <span class="type">Bool</span>
+
+                                <div class="param-description">
+                                    <p>If set to true, padding params will be ignored and a loose spiral (Archimedes spiral) will be created.</p>
+
+                                </div>
+
+                            </li>
+                            <li class="param">
+                                    <code class="param-name">startRadius</code>
+                                    <span class="type">Number</span>
+
+                                <div class="param-description">
+                                    <p>Initial radius (a margin radius at the center). Default is 0.</p>
+
+                                </div>
+
+                            </li>
+                        </ul>
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+            </div>
+
+
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

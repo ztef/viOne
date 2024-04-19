@@ -1,0 +1,186 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+	<title>VOne Test</title>
+	
+
+	<script type='text/javascript' src='javascript/libs/three.min.js'></script>
+	<script type='text/javascript' src='javascript/libs/TrackballControls.js'></script>
+	
+
+	<script type='text/javascript' src='../dist/VOne.js'></script>
+</head>
+<body>
+
+	<div id="statusDiv" style="width: 20em; height: 1.5em; background-color: rgba(10, 10, 10, .5); position: fixed; bottom: 5px; left: 5px; padding: 0.5em 2em; color: #eee; font-family: Verdana, Arial;"></div>
+
+	<script type='text/javascript'>
+
+		var sceneCreator = new VOne.SceneCreator();
+
+		
+		scene = sceneCreator.createScene({ controls: THREE.TrackballControls, glRenderer: THREE.WebGLRenderer, bgColor: 0x000077 });
+
+
+		var linesMaterial = new THREE.LineBasicMaterial({ linewidth: 0.1, color: 0xffffff, transparent: true, opacity: 0.8 } );
+
+		
+
+		var shadersCreator = new VOne.ShaderCreator();
+
+		var shader = shadersCreator.createShader(
+			{
+				color: 'color',
+				alpha: 'alpha'
+
+			});
+
+		
+
+		var material = new THREE.ShaderMaterial({ 
+
+			vertexShader: shader.vertexShader,
+			fragmentShader: shader.fragmentShader,
+			uniforms: shader.uniforms,
+
+			blending: THREE.AdditiveBlending,
+			depthTest: true,
+
+			transparent: true
+
+		});
+
+
+
+
+		var hexGrid = new VOne.HexGrid(-15000, -6000, 15000, 6000, 1200, false);
+
+			console.log(hexGrid);
+
+			var edgesGeometry = hexGrid.generateEdgesGeometry(0);
+
+
+			hexGrid.generateBufferGeometries(0)
+
+				.setGeometriesColor(function(v){
+
+					return new THREE.Color('rgb(10, 50, 240)');
+
+				})
+
+				.setGeometriesAlpha(function(v){
+
+					return Math.random();
+				});	
+
+
+			var edges = new THREE.LineSegments ( edgesGeometry, linesMaterial);
+			
+			var gridMesh = new THREE.Mesh(hexGrid.bufferGeometry, material);
+
+			scene.add([edges, gridMesh]);
+
+
+			var model = hexGrid.bufferGeometryModel;
+			model.setMesh(gridMesh);
+
+
+			gridMesh.rotateX(-90 * VOne.degToRad);
+			edges.rotateX(-90 * VOne.degToRad);
+
+
+		
+
+		var hexGrid2 = new VOne.HexGrid(-10000, -8000, 10000, 8000, 1000, false);
+
+			console.log(hexGrid2);
+
+			var edgesGeometry = hexGrid2.generateEdgesGeometry(1500);
+
+
+			hexGrid2.generateBufferGeometries(1500)
+
+				.setGeometriesColor(function(v){
+
+					return new THREE.Color('rgb(10, 50, 240)');
+
+				})
+
+				.setGeometriesAlpha(function(v){
+
+					return Math.random();
+				});	
+
+
+			var edges2 = new THREE.LineSegments ( edgesGeometry, linesMaterial);
+
+			var gridMesh2 = new THREE.Mesh(hexGrid2.bufferGeometry, material);
+
+			scene.add([edges2, gridMesh2]);
+
+
+			var model2 = hexGrid2.bufferGeometryModel;
+			model2.setMesh(gridMesh2);
+
+			gridMesh2.rotateX(-90 * VOne.degToRad);
+			edges2.rotateX(-90 * VOne.degToRad);
+
+
+
+			var hexGrid3 = new VOne.HexGrid(-10000, -8000, 10000, 8000, 1000, false);
+
+			console.log(hexGrid3);
+
+			var edgesGeometry = hexGrid3.generateEdgesGeometry(4000);
+
+
+			hexGrid3.generateBufferGeometries(4000)
+
+				.setGeometriesColor(function(v){
+
+					return new THREE.Color('rgb(10, 50, 240)');
+
+				})
+
+				.setGeometriesAlpha(function(v){
+
+					return Math.random();
+				});	
+
+
+			var edges3 = new THREE.LineSegments ( edgesGeometry, linesMaterial);
+
+			var gridMesh3 = new THREE.Mesh(hexGrid3.bufferGeometry, material);
+
+			scene.add([gridMesh3, edges3], 'gridMesh3');
+
+
+			sceneObjects = scene.getSceneObjects();
+
+			var grid3 = sceneObjects['gridMesh3'];
+
+			grid3.rotateX(-90 * VOne.degToRad);
+
+
+			var model3 = hexGrid3.bufferGeometryModel;
+			model3.setMesh(gridMesh3);
+
+			// gridMesh3.rotateX(-90 * VOne.degToRad);
+			// edges3.rotateX(-90 * VOne.degToRad);
+
+
+
+
+			var gridSize = 20000, gridStep = 1000, gridCenterColor = new THREE.Color(0xaa0000); 
+			var gridHelper = new THREE.GridHelper( gridSize, gridStep, gridCenterColor ); 
+			scene.add( gridHelper );
+
+
+			gridHelper.rotateX(90 * VOne.degToRad);
+
+
+	</script>
+
+</body>
+
+</html>

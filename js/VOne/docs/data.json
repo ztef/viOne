@@ -1,0 +1,3576 @@
+{
+    "project": {
+        "name": "VOne",
+        "description": "The Visualization-One core lib.",
+        "version": "1.1.1",
+        "url": "geckode.mx/VOneDocs/",
+        "logo": "/resources/Logo-VOne-Final.png"
+    },
+    "files": {
+        "2D/hexGrid.js": {
+            "name": "2D/hexGrid.js",
+            "modules": {},
+            "classes": {
+                "VOne.HexGrid": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "2D/polygon.js": {
+            "name": "2D/polygon.js",
+            "modules": {},
+            "classes": {
+                "VOne.Polygon": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Animation/basicAnimation.js": {
+            "name": "Animation/basicAnimation.js",
+            "modules": {},
+            "classes": {
+                "VOne.Animation": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Controls/LeapGrabControls.js": {
+            "name": "Controls/LeapGrabControls.js",
+            "modules": {},
+            "classes": {
+                "VOne.LeapGrabControls": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "DataUtils/assignLevelData.js": {
+            "name": "DataUtils/assignLevelData.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "VOne": 1
+            },
+            "namespaces": {}
+        },
+        "Distributions/forceDirectedLayout/graph.js": {
+            "name": "Distributions/forceDirectedLayout/graph.js",
+            "modules": {},
+            "classes": {
+                "VOne.Graph": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Distributions/forceDirectedLayout/graphEdge.js": {
+            "name": "Distributions/forceDirectedLayout/graphEdge.js",
+            "modules": {},
+            "classes": {
+                "VOne.GraphEdge": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Distributions/forceDirectedLayout/graphNode.js": {
+            "name": "Distributions/forceDirectedLayout/graphNode.js",
+            "modules": {},
+            "classes": {
+                "VOne.GraphNode": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Distributions/circlePackLayout.js": {
+            "name": "Distributions/circlePackLayout.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "VOne": 1
+            },
+            "namespaces": {}
+        },
+        "Distributions/deathSphere.js": {
+            "name": "Distributions/deathSphere.js",
+            "modules": {},
+            "classes": {
+                "VOne.DeathSphere": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Distributions/fibSphere.js": {
+            "name": "Distributions/fibSphere.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "VOne": 1
+            },
+            "namespaces": {}
+        },
+        "Distributions/halfTube.js": {
+            "name": "Distributions/halfTube.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "VOne": 1
+            },
+            "namespaces": {}
+        },
+        "Distributions/radialDistribution.js": {
+            "name": "Distributions/radialDistribution.js",
+            "modules": {},
+            "classes": {
+                "VOne.RadialDistribution": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Distributions/spiral.js": {
+            "name": "Distributions/spiral.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "VOne": 1
+            },
+            "namespaces": {}
+        },
+        "GeometryUtils/cpsBufferGeometriesGenerator.js": {
+            "name": "GeometryUtils/cpsBufferGeometriesGenerator.js",
+            "modules": {},
+            "classes": {
+                "VOne.CPSBufferGeometriesGenerator": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "GeometryUtils/genericBufferGeometriesGenerator.js": {
+            "name": "GeometryUtils/genericBufferGeometriesGenerator.js",
+            "modules": {},
+            "classes": {
+                "VOne.GenericBufferGeometriesGenerator": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "GeometryUtils/pieSlice.js": {
+            "name": "GeometryUtils/pieSlice.js",
+            "modules": {},
+            "classes": {
+                "VOne.PieSlice": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "GeometryUtils/relationshipBufferGeometriesGenerator.js": {
+            "name": "GeometryUtils/relationshipBufferGeometriesGenerator.js",
+            "modules": {},
+            "classes": {
+                "VOne.RelationshipBufferGeometriesGenerator": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Model/backgroundModelGenerator.js": {
+            "name": "Model/backgroundModelGenerator.js",
+            "modules": {},
+            "classes": {
+                "VOne.BackgroundModelGenerator": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Model/bufferGeometryModel.js": {
+            "name": "Model/bufferGeometryModel.js",
+            "modules": {},
+            "classes": {
+                "VOne.BufferGeometryModel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Model/geometryModel.js": {
+            "name": "Model/geometryModel.js",
+            "modules": {},
+            "classes": {
+                "VOne.GeometryModel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Model/preparedBufferGeometryModel.js": {
+            "name": "Model/preparedBufferGeometryModel.js",
+            "modules": {},
+            "classes": {
+                "VOne.PreparedBufferGeometryModel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Resources/defaultImages.js": {
+            "name": "Resources/defaultImages.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "SceneUtils/ThreeSceneManager.js": {
+            "name": "SceneUtils/ThreeSceneManager.js",
+            "modules": {},
+            "classes": {
+                "VOne.ThreeSceneManager": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "THREEUtils/THREEUtils.js": {
+            "name": "THREEUtils/THREEUtils.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "THREE.Mesh": 1
+            },
+            "namespaces": {}
+        },
+        "Utils/label3D.js": {
+            "name": "Utils/label3D.js",
+            "modules": {},
+            "classes": {
+                "VOne.Label3D": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Utils/logScale.js": {
+            "name": "Utils/logScale.js",
+            "modules": {},
+            "classes": {
+                "VOne.LogScale": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Utils/selection.js": {
+            "name": "Utils/selection.js",
+            "modules": {},
+            "classes": {
+                "VOne.Selection": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "Utils/selector.js": {
+            "name": "Utils/selector.js",
+            "modules": {},
+            "classes": {},
+            "fors": {
+                "VOne": 1
+            },
+            "namespaces": {}
+        },
+        "Utils/shaderCreator.js": {
+            "name": "Utils/shaderCreator.js",
+            "modules": {},
+            "classes": {
+                "VOne.ShaderCreator": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "sceneCreator.js": {
+            "name": "sceneCreator.js",
+            "modules": {},
+            "classes": {
+                "VOne.SceneCreator": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "VOne.HexGrid": {
+            "name": "VOne.HexGrid",
+            "shortname": "VOne.HexGrid",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "2D/hexGrid.js",
+            "line": 1,
+            "description": "Creates and manages hexagonal grids in a rectangular delimited space.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "startX",
+                    "description": "Initial X coordinate.",
+                    "type": "Number"
+                },
+                {
+                    "name": "startY",
+                    "description": "Initial Y coordinate.",
+                    "type": "Number"
+                },
+                {
+                    "name": "endX",
+                    "description": "End X coordinate.",
+                    "type": "Number"
+                },
+                {
+                    "name": "endY",
+                    "description": "End Y coordinate.",
+                    "type": "Number"
+                },
+                {
+                    "name": "diameter",
+                    "description": "Diameter of the circle that may circumscript every hexagon.",
+                    "type": "Number"
+                },
+                {
+                    "name": "rotated",
+                    "description": "Indicates if the hexagons will be rotated (90 degrees).",
+                    "type": "Boolean"
+                }
+            ]
+        },
+        "VOne.Polygon": {
+            "name": "VOne.Polygon",
+            "shortname": "VOne.Polygon",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "2D/polygon.js",
+            "line": 1,
+            "description": "Creates a 2D polygon model.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "verticesNumber",
+                    "description": "Number of vertices for polygon.",
+                    "type": "Int"
+                },
+                {
+                    "name": "centerX",
+                    "description": "Center x polygon position.",
+                    "type": "Float"
+                },
+                {
+                    "name": "centerY",
+                    "description": "Center y polygon position.",
+                    "type": "Float"
+                },
+                {
+                    "name": "radius",
+                    "description": "Radius of the circle where the polygon will be circumscripted.",
+                    "type": "Float"
+                },
+                {
+                    "name": "poligonRotated",
+                    "description": "If set to true, the first vertex will be at 90 degrees position. Else, first vertex will be positioned a 0 degrees.",
+                    "type": "Boolean"
+                }
+            ]
+        },
+        "VOne.Animation": {
+            "name": "VOne.Animation",
+            "shortname": "VOne.Animation",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Animation/basicAnimation.js",
+            "line": 1,
+            "description": "Starts a basic animation for a given THREE.Mesh.",
+            "static": 1,
+            "is_constructor": 1
+        },
+        "VOne.LeapGrabControls": {
+            "name": "VOne.LeapGrabControls",
+            "shortname": "VOne.LeapGrabControls",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Controls/LeapGrabControls.js",
+            "line": 1,
+            "description": "Grab controls for a VOne.SceneManager. Allows to control a scene using Leap Motion controller. This can be used with any other controller designed for THREE.js. When a hand/object is detected, the default THREE.js controller will be disabled. Once no hand is present in the Leap Motion sensing area, the default THREE.js controller will be re-enabled.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "scene",
+                    "description": "The VOne.SceneManager containing the camera to control using the Leap Motion controller.",
+                    "type": "VOne.SceneManager"
+                },
+                {
+                    "name": "config",
+                    "description": "Options for configuring controls:",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "objectToControl",
+                            "description": "The object to control with the Leap Motion controller. Defaults to the camera from the provided scene.",
+                            "type": "THREE.Object3D"
+                        },
+                        {
+                            "name": "panSpeed",
+                            "description": "Acceleration for panning. Defult is 0.02.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "rotationSpeed",
+                            "description": "Acceleration for rotation. Default is 0.05.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "zoomSpeed",
+                            "description": "Acceleration for zooming. Work in progress... Do not use or do it at your own risk.",
+                            "type": "Number"
+                        }
+                    ]
+                }
+            ]
+        },
+        "VOne": {
+            "name": "VOne",
+            "shortname": "VOne",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": []
+        },
+        "VOne.Graph": {
+            "name": "VOne.Graph",
+            "shortname": "VOne.Graph",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 1,
+            "description": "A directed graph model.",
+            "is_constructor": 1
+        },
+        "VOne.GraphEdge": {
+            "name": "VOne.GraphEdge",
+            "shortname": "VOne.GraphEdge",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Distributions/forceDirectedLayout/graphEdge.js",
+            "line": 1,
+            "description": "A directed graph model edge.",
+            "is_constructor": 1
+        },
+        "VOne.GraphNode": {
+            "name": "VOne.GraphNode",
+            "shortname": "VOne.GraphNode",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Distributions/forceDirectedLayout/graphNode.js",
+            "line": 1,
+            "description": "A directed graph model node.",
+            "is_constructor": 1
+        },
+        "VOne.DeathSphere": {
+            "name": "VOne.DeathSphere",
+            "shortname": "VOne.DeathSphere",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Distributions/deathSphere.js",
+            "line": 1,
+            "description": "Used to generate 'death spheres' (called like this due to death star is a copyrighted mark).",
+            "is_constructor": 1
+        },
+        "VOne.RadialDistribution": {
+            "name": "VOne.RadialDistribution",
+            "shortname": "VOne.RadialDistribution",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Distributions/radialDistribution.js",
+            "line": 1,
+            "description": "Generates radial distributions from arrays. Arrays must have the following structure:\n\n\t[ key: \"name\", values: [ object, object, ..., object ]];\n\n\teach object can have the same structure.",
+            "is_constructor": 1
+        },
+        "VOne.CPSBufferGeometriesGenerator": {
+            "name": "VOne.CPSBufferGeometriesGenerator",
+            "shortname": "VOne.CPSBufferGeometriesGenerator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "GeometryUtils/cpsBufferGeometriesGenerator.js",
+            "line": 1,
+            "description": "Generates buffered geometries with color, position and size attributes from a provided data model.",
+            "is_constructor": 1
+        },
+        "VOne.GenericBufferGeometriesGenerator": {
+            "name": "VOne.GenericBufferGeometriesGenerator",
+            "shortname": "VOne.GenericBufferGeometriesGenerator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "GeometryUtils/genericBufferGeometriesGenerator.js",
+            "line": 1,
+            "description": "Generates buffered geometries from a provided data model.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "instancedBufferGeometry",
+                    "description": "Determines if an instanced bufferGeometry will be used.",
+                    "type": "Boolean"
+                }
+            ]
+        },
+        "VOne.PieSlice": {
+            "name": "VOne.PieSlice",
+            "shortname": "VOne.PieSlice",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "GeometryUtils/pieSlice.js",
+            "line": 1,
+            "description": "Generates pie slices' geometries.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "config",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "startAngle",
+                            "description": "",
+                            "type": "Float"
+                        },
+                        {
+                            "name": "endAngle",
+                            "description": "",
+                            "type": "Float"
+                        },
+                        {
+                            "name": "innerRadius",
+                            "description": "",
+                            "type": "Float"
+                        },
+                        {
+                            "name": "outerRadius",
+                            "description": "",
+                            "type": "Float"
+                        },
+                        {
+                            "name": "height",
+                            "description": "",
+                            "type": "Float"
+                        },
+                        {
+                            "name": "color",
+                            "description": "",
+                            "type": "THREE.Color"
+                        },
+                        {
+                            "name": "alpha",
+                            "description": "",
+                            "type": "Float"
+                        },
+                        {
+                            "name": "angleInRadians",
+                            "description": "",
+                            "type": "Boolean"
+                        }
+                    ]
+                }
+            ]
+        },
+        "VOne.RelationshipBufferGeometriesGenerator": {
+            "name": "VOne.RelationshipBufferGeometriesGenerator",
+            "shortname": "VOne.RelationshipBufferGeometriesGenerator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "GeometryUtils/relationshipBufferGeometriesGenerator.js",
+            "line": 1,
+            "description": "Generates line buffered geometries from a provided data model.",
+            "is_constructor": 1
+        },
+        "VOne.BackgroundModelGenerator": {
+            "name": "VOne.BackgroundModelGenerator",
+            "shortname": "VOne.BackgroundModelGenerator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 1,
+            "description": "<p>A tool for creating data models with raw data types and generate position, color, size and alpha arrays to be used with a THREE.BufferGeometry.</p><p>The data model can be created from several records arrays. This is useful when working with partial data loads and/or large data sets.</p><p>Processing position, color, alpha and size setting functions and appending records to the data model is done in a separate background thread. Therefore the class name.</p>",
+            "is_constructor": 1,
+            "extends": "VOne.PreparedBufferGeometryModel",
+            "params": [
+                {
+                    "name": "recordsCount",
+                    "description": "<p>The total records to be expected to manage. </p><p>This parameter will reserve the exact memory ammount to handle those records, no more. So, if you set this param to be smaller than your final recordset, you'll be troubled.</p>",
+                    "type": "Int"
+                },
+                {
+                    "name": "model",
+                    "description": "<p>The properties model that each record will have and you'll need to use.</p><p>This param must have the following format: </p><p>&nbsp; &nbsp; { propertyName: array_type, propertyName: array_type ... propertyName: array_type } </p><p>where propertyName is the property name to use from each record and array type is one of the following list: </p><p><ul><li>Int8Array</li><li>Uint8Array</li><li>Uint8ClampedArray</li><li>Int16Array</li><li>Uint16Array</li><li>Int32Array</li><li>Uint32Array</li><li>Float32Array</li><li>Float64Array</li></ul></p><p>Each one of these array types must correspond to the type of the value expected for each field/property from the recordset. For more information about each one of these array types visit <a href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray\">Typed arrays docs</a> </p>",
+                    "type": "Object"
+                },
+                {
+                    "name": "recordsPartialDeliverCount",
+                    "description": "Indicates the amount of records that will be passed to the background thread each time when working with multiple partial records loading. If not set, the recordsCount value will be used.",
+                    "type": "Int"
+                }
+            ]
+        },
+        "VOne.BufferGeometryModel": {
+            "name": "VOne.BufferGeometryModel",
+            "shortname": "VOne.BufferGeometryModel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Model/bufferGeometryModel.js",
+            "line": 1,
+            "description": "Represents a BufferGeometry with its dataModel and attributes.",
+            "is_constructor": 1
+        },
+        "VOne.GeometryModel": {
+            "name": "VOne.GeometryModel",
+            "shortname": "VOne.GeometryModel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Model/geometryModel.js",
+            "line": 1,
+            "description": "VOne geometry model. Allows to manage geometries' properties and interactions.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "name",
+                    "description": "A name to identify the model.",
+                    "type": "String"
+                },
+                {
+                    "name": "3DObject",
+                    "description": "THREE.Points or [THREE.Mesh].",
+                    "type": "Object"
+                },
+                {
+                    "name": "dataModel",
+                    "description": "An array of the data-model objects with properties for rendering them.",
+                    "type": "Array",
+                    "optional": true
+                },
+                {
+                    "name": "attributes",
+                    "description": "Buffer attributes for the graphical representation.",
+                    "type": "Object",
+                    "optional": true,
+                    "props": [
+                        {
+                            "name": "size",
+                            "description": "",
+                            "type": "Float32Array",
+                            "optional": true
+                        },
+                        {
+                            "name": "color",
+                            "description": "",
+                            "type": "Float32Array",
+                            "optional": true
+                        },
+                        {
+                            "name": "position",
+                            "description": "",
+                            "type": "Float32Array",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "VOne.PreparedBufferGeometryModel": {
+            "name": "VOne.PreparedBufferGeometryModel",
+            "shortname": "VOne.PreparedBufferGeometryModel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Model/preparedBufferGeometryModel.js",
+            "line": 1,
+            "description": "Represents a BufferGeometry with its dataModel and attributes. Can handle partial rendering of the buffer geometry attributes.",
+            "is_constructor": 1,
+            "extends": "VOne.BufferGeometryModel",
+            "params": [
+                {
+                    "name": "maxVerticesNumber",
+                    "description": "The max vertices amount that the geometry will handle. Values like NaN of Infinity can lead to disaster. Please use natural numbers.",
+                    "type": "Int"
+                },
+                {
+                    "name": "dataModel",
+                    "description": "The dataModel objects array.",
+                    "type": "Array"
+                }
+            ]
+        },
+        "VOne.ThreeSceneManager": {
+            "name": "VOne.ThreeSceneManager",
+            "shortname": "VOne.ThreeSceneManager",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 1,
+            "description": "Provides easy management for a THREE.js webGL scene.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "scene",
+                    "description": "A three.js scene Object.",
+                    "type": "THREE.Scene"
+                },
+                {
+                    "name": "interactiveModels",
+                    "description": "An interactiveModels object.",
+                    "type": "Object"
+                }
+            ]
+        },
+        "THREE.Mesh": {
+            "name": "THREE.Mesh",
+            "shortname": "THREE.Mesh",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": []
+        },
+        "VOne.Label3D": {
+            "name": "VOne.Label3D",
+            "shortname": "VOne.Label3D",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Utils/label3D.js",
+            "line": 1,
+            "description": "Creates 2D planes with text for using them in a 3D scene. The plane will contain a canvas with dimensions according to the text and config parameters provided.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "text",
+                    "description": "The text to create. Ideally, you should provide just one line of text. [TODO: change this parameter to accept an array, each element would be a line with text].",
+                    "type": "String"
+                },
+                {
+                    "name": "config",
+                    "description": "Options for customizing the text.",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "fontFace",
+                            "description": "Font face to be used. Defaults to Arial Narrow.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "fontSize",
+                            "description": "Size to be used in the font. Default is 18.",
+                            "type": "Int"
+                        },
+                        {
+                            "name": "borderThickness",
+                            "description": "Border thickness to be used in the font. Default is 0.",
+                            "type": "Float"
+                        },
+                        {
+                            "name": "backgroundColor",
+                            "description": "Background color to be used with the text in the form { r: red, g: green, b: blue, a: alpha }. Default is { r:150, g:0, b:150, a:0.0 }",
+                            "type": "Object"
+                        },
+                        {
+                            "name": "textColor",
+                            "description": "Color to be used for the text in the form { r: red, g: green, b: blue, a: alpha }. Default is { r:30, g:0, b:190, a:1.0 }.",
+                            "type": "Object"
+                        },
+                        {
+                            "name": "textAlign",
+                            "description": "Text align (left, center, right);",
+                            "type": "String"
+                        },
+                        {
+                            "name": "spriteMaterial",
+                            "description": "Indicates if the returned object will use a sprite material (always facing to the camera). If not set or set to false, the returned object will be a plane containing the text.",
+                            "type": "Boolean"
+                        },
+                        {
+                            "name": "lineLength",
+                            "description": "Amount of max chars per line. Default is 27.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "maxLines",
+                            "description": "Max number of lines to be used. Default is 3.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "lineHeight",
+                            "description": "Lines height. Default is fontSize + 5.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "canvasFixedWidth",
+                            "description": "Texture canvas prefered width.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "canvasFixedHeight",
+                            "description": "Texture canvas preferred height.",
+                            "type": "Number"
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "A plane containing the text with the provided parameters.",
+                "type": "THREE.Object3D"
+            }
+        },
+        "VOne.LogScale": {
+            "name": "VOne.LogScale",
+            "shortname": "VOne.LogScale",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Utils/logScale.js",
+            "line": 1,
+            "description": "Utility for calculating values in logarithmic base 10 scales.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "domain",
+                    "description": "Domain min and max values in the form [minValue, maxValue]",
+                    "type": "Array"
+                },
+                {
+                    "name": "range",
+                    "description": "Range max and min values in the form [minValue, maxValue]",
+                    "type": "Array"
+                }
+            ]
+        },
+        "VOne.Selection": {
+            "name": "VOne.Selection",
+            "shortname": "VOne.Selection",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Utils/selection.js",
+            "line": 1,
+            "description": "Represents a VOne.select result"
+        },
+        "VOne.ShaderCreator": {
+            "name": "VOne.ShaderCreator",
+            "shortname": "VOne.ShaderCreator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "Utils/shaderCreator.js",
+            "line": 1,
+            "description": "Shader creator.",
+            "is_constructor": 1
+        },
+        "VOne.SceneCreator": {
+            "name": "VOne.SceneCreator",
+            "shortname": "VOne.SceneCreator",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "sceneCreator.js",
+            "line": 1,
+            "is_constructor": 1
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "2D/hexGrid.js",
+            "line": 15,
+            "description": "The hexagonal grid horizontal length.",
+            "itemtype": "property",
+            "name": "lengthX",
+            "type": "{Number}",
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 24,
+            "description": "The hexagonal grid vertical length.",
+            "itemtype": "property",
+            "name": "lengthY",
+            "type": "{Number}",
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 34,
+            "description": "Indicates if hexagons are rotated by 90 degrees.",
+            "itemtype": "property",
+            "name": "rotated",
+            "type": "{Number}",
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 44,
+            "description": "An array containing each hexagon generated THREE.Shape",
+            "itemtype": "property",
+            "name": "shapes",
+            "type": "{Array}",
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 54,
+            "description": "An array containing the hexagons map.",
+            "itemtype": "property",
+            "name": "model",
+            "type": "{Array}",
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 64,
+            "description": "The model associative array.",
+            "itemtype": "property",
+            "name": "byNameModel",
+            "type": "{Object}",
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 74,
+            "description": "The circle radius that circumscripts each hexagon.",
+            "itemtype": "property",
+            "name": "lengthX",
+            "type": "{Number}",
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 84,
+            "description": "The hexagons' grid horizontal stating point.",
+            "itemtype": "property",
+            "name": "startX",
+            "type": "{Number}",
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 94,
+            "description": "The hexagons' grid vertical stating point.",
+            "itemtype": "property",
+            "name": "startY",
+            "type": "{Number}",
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 104,
+            "description": "The hexagons' grid horizontal ending point.",
+            "itemtype": "property",
+            "name": "endX",
+            "type": "{Number}",
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 114,
+            "description": "The hexagons' grid vertical ending point.",
+            "itemtype": "property",
+            "name": "endY",
+            "type": "{Number}",
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 130,
+            "description": "The vertical distance between each hexagon in the Hexgrid.",
+            "itemtype": "property",
+            "name": "deltaY",
+            "type": "{Number}",
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 139,
+            "description": "The horizontal distance between each hexagon in the Hexgrid.",
+            "itemtype": "property",
+            "name": "deltaY",
+            "type": "{Number}",
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 242,
+            "description": "Generates a buffer geometry object from the hexagonal grid model generated in constructor. This method add the bufferGeometry and bufferGeometryModel properties to the instance. Up to this method, the bufferGeometryModel will hold the model and position properties.",
+            "itemtype": "method",
+            "name": "generateBufferGeometries",
+            "params": [
+                {
+                    "name": "zPosition",
+                    "description": "The Z position to use for the generated geometry.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "The instance of the HexGrid for calling another method.",
+                "type": "VOne.HexGrid"
+            },
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 307,
+            "description": "Sets colors to the vertices of a THREE.BufferGeometry previuosly generated using the generateBufferGeometries method and sets the corresponding property to the bufferGeometryModel property.",
+            "itemtype": "method",
+            "name": "setGeometriesColor",
+            "params": [
+                {
+                    "name": "setColor",
+                    "description": "A function to set the color for each hexagon geometry in the form function(hex){ ... return THREE.Color(valid color)); . The function will receive each hexagon from the model generated in the constructor. You can alternatively set directly a THREE.Color.",
+                    "type": "function || THREE.Color"
+                }
+            ],
+            "return": {
+                "description": "The instance of the HexGrid for calling another method.",
+                "type": "VOne.HexGrid"
+            },
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 381,
+            "description": "Sets alpha to the vertices of a THREE.BufferGeometry previuosly generated using the generateBufferGeometries method and sets the corresponding property to the bufferGeometryModel property.",
+            "itemtype": "method",
+            "name": "setGeometriesAlpha",
+            "params": [
+                {
+                    "name": "setAlpha",
+                    "description": "A function to set the color for each hexagon geometry. The alpha value will be set for each vertex.",
+                    "type": "Function || Number [0-1]"
+                }
+            ],
+            "return": {
+                "description": "The instance of the HexGrid for calling another method.",
+                "type": "VOne.HexGrid"
+            },
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 449,
+            "description": "Generates a THREE.BufferGeometry ready to use with a line material to draw the hexagons borders.",
+            "itemtype": "method",
+            "name": "generateEdgesGeometry",
+            "params": [
+                {
+                    "name": "zPosition",
+                    "description": "The z position to be set in all the hexagons. Default is 0.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "The instance of the HexGrid for calling another method.",
+                "type": "VOne.HexGrid"
+            },
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/hexGrid.js",
+            "line": 494,
+            "description": "Determines in which hexagon is contained a provided x, y point in a bidimiensional space.",
+            "itemtype": "method",
+            "name": "whereIs",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "The x position of the point.",
+                    "type": "Number"
+                },
+                {
+                    "name": "y",
+                    "description": "The y position of the point.",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "The hexagon object from the model in which the point is contained.",
+                "type": "VOne.Polygon"
+            },
+            "class": "VOne.HexGrid"
+        },
+        {
+            "file": "2D/polygon.js",
+            "line": 21,
+            "description": "An array conaining the created vertices. The last vertex will be exactly the same as first to allow easy creation of a THREE.Geometry.",
+            "itemtype": "property",
+            "name": "vertices",
+            "type": "{THREE.Vector2 Array}",
+            "class": "VOne.Polygon"
+        },
+        {
+            "file": "Animation/basicAnimation.js",
+            "line": 15,
+            "description": "Starts a basic animation for a given THREE.Mesh.",
+            "itemtype": "method",
+            "name": "meshBasicAnimation",
+            "params": [
+                {
+                    "name": "mesh",
+                    "description": "A mesh to animate.",
+                    "type": "THREE.Mesh"
+                },
+                {
+                    "name": "animationType",
+                    "description": "Animation type: VOne.PositionAnimation || VOne.ScaleAnimation.",
+                    "type": "Int"
+                },
+                {
+                    "name": "destinationVector",
+                    "description": "The destination vector.",
+                    "type": "THREE.Vector3"
+                },
+                {
+                    "name": "duration",
+                    "description": "Duration time for the animation specified in miliseconds. Default is 500.",
+                    "type": "Float"
+                },
+                {
+                    "name": "callback",
+                    "description": "Callback function to be executed once the animation is finished.",
+                    "type": "Function",
+                    "optional": true
+                }
+            ],
+            "class": "VOne.Animation"
+        },
+        {
+            "file": "Animation/basicAnimation.js",
+            "line": 93,
+            "description": "Starts a basic animation for a given THREE.Points object.",
+            "itemtype": "method",
+            "name": "pointsBasicAnimation",
+            "params": [
+                {
+                    "name": "points",
+                    "description": "The Points object to animate.",
+                    "type": "THREE.Points"
+                },
+                {
+                    "name": "index",
+                    "description": "The index corresponding to the point to be animated.",
+                    "type": "Int"
+                },
+                {
+                    "name": "animationType",
+                    "description": "Animation type: VOne.PositionAnimation || VOne.ScaleAnimation || VOne.AlphaAnimation.",
+                    "type": "Int"
+                },
+                {
+                    "name": "destinationVector",
+                    "description": "The destination position vector in case of position animation. In case of scale animation, a float target value must be provided.",
+                    "type": "THREE.Vector3 || Float"
+                },
+                {
+                    "name": "duration",
+                    "description": "Duration time for the animation specified in miliseconds. Default is 500.",
+                    "type": "Float"
+                }
+            ],
+            "class": "VOne.Animation"
+        },
+        {
+            "file": "Controls/LeapGrabControls.js",
+            "line": 49,
+            "description": "Reference point which the controlled object will move around.",
+            "itemtype": "property",
+            "name": "target",
+            "type": "THREE.Vector3",
+            "class": "VOne.LeapGrabControls"
+        },
+        {
+            "file": "Controls/LeapGrabControls.js",
+            "line": 61,
+            "description": "Flag indicating that a hand (or a pointing object) has been detected by Leap Motion controller..",
+            "itemtype": "property",
+            "name": "pointingFlag",
+            "type": "Boolean",
+            "class": "VOne.LeapGrabControls"
+        },
+        {
+            "file": "DataUtils/assignLevelData.js",
+            "line": 1,
+            "description": "Assigns properties for multilevel/multicontained data arrays by traversing the complete array. Allows to set properties for last child elements and calculate total values for parents based on a given child value.",
+            "itemtype": "method",
+            "name": "assignLevelData",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "The dataset to assign properties. Must have be in the following format: <br/> [ { keyName: keyname, valuesPropertyName: [values] }, ... { keyName: keyname, valuesPropertyName: [values] } ];",
+                    "type": "Array"
+                },
+                {
+                    "name": "config",
+                    "description": "Settings for generating the distribution",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "parentPropertyName",
+                            "description": "The keyName property (parent elements name). Default is 'key'.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "childPropertyName",
+                            "description": "The values property name to search for for each parent. Default is 'values'.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "setTotalBy",
+                            "description": "Function to be evaluated | value to assign as totalValue for each last child element. Each parent will contain in the 'totalValue' property the sum of all children assigned values.",
+                            "type": "Function | number"
+                        },
+                        {
+                            "name": "storeTotalValueAs",
+                            "description": "Used in conjunction with config.setTotalBy, indicates the property name to be assigned for totals. Each parent will hold this property as the sum of this property name of every child. Defaults to 'totalValue'",
+                            "type": "String"
+                        },
+                        {
+                            "name": "extendRecordsOn",
+                            "description": "If you want to generate records based on a given property, set this property with the property which value is the amount of records to append. The last child record will be copied as many times this property indicates.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "processLastChildAs",
+                            "description": "Function to be executed on every last child record.  The function will receive the record for allowing you to make any aditional calculations and/or set new properties on/for it.",
+                            "type": "Function"
+                        }
+                    ]
+                }
+            ],
+            "class": "VOne"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 11,
+            "description": "An array conaining the graph nodes.",
+            "itemtype": "property",
+            "name": "nodes",
+            "type": "{VOne.GraphNode Array}",
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 20,
+            "description": "An array conaining the graph relations (edges).",
+            "itemtype": "property",
+            "name": "edges",
+            "type": "{VOne.GraphEdge Array}",
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 30,
+            "description": "An associative array conaining the graph nodes by id.",
+            "itemtype": "property",
+            "name": "nodeIdMap",
+            "type": "{Object}",
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 44,
+            "description": "Center position for the graphic graph representation.",
+            "itemtype": "property",
+            "name": "startingPosition",
+            "type": "{THREE.Vector3}",
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 63,
+            "description": "Adds a VOne.GraphNode to the graph model.",
+            "itemtype": "method",
+            "name": "addNode",
+            "params": [
+                {
+                    "name": "node",
+                    "description": "The node to be added to the model.",
+                    "type": "VOne.GraphNode"
+                }
+            ],
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 88,
+            "description": "Adds a VOne.GraphEdge to the graph model.",
+            "itemtype": "method",
+            "name": "addEdge",
+            "params": [
+                {
+                    "name": "edge",
+                    "description": "The edge to be added to the graph model.",
+                    "type": "VOne.GraphEdge"
+                }
+            ],
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 107,
+            "description": "Searches for a VOne.GraphNode in the graph model.",
+            "itemtype": "method",
+            "name": "getNodeById",
+            "params": [
+                {
+                    "name": "nodeId",
+                    "description": "The VOne.GraphNode id.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The VOne.GraphNode with the given id.",
+                "type": "VOne.GraphNode"
+            },
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 122,
+            "description": "Searches for a VOne.GraphEdge in the graph model.",
+            "itemtype": "method",
+            "name": "findEdge",
+            "params": [
+                {
+                    "name": "souceNode",
+                    "description": "The VOne.GraphNode edge source.",
+                    "type": "VOne.GraphNode"
+                },
+                {
+                    "name": "targetNode",
+                    "description": "The VOne.GraphNode edge target.",
+                    "type": "VOne.GraphNode"
+                }
+            ],
+            "return": {
+                "description": "The VOne.GraphEdge that connects the given nodes.",
+                "type": "VOne.GraphEdge"
+            },
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 149,
+            "description": "Searches for a VOne.GraphNode in the graph model. If no node is found, creates a new VOne.GraphNode with the given id.",
+            "itemtype": "method",
+            "name": "findOrCreateNode",
+            "params": [
+                {
+                    "name": "nodeId",
+                    "description": "The VOne.GraphNode id to be found or created.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The found or created VOne.GraphNode.",
+                "type": "VOne.GraphNode"
+            },
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 176,
+            "description": "Searches for a VOne.GraphEdge in the graph model. If no edge is found, a new VOne.GraphEdge is created.",
+            "itemtype": "method",
+            "name": "findOrCreateEdge",
+            "params": [
+                {
+                    "name": "sourceNode",
+                    "description": "The edge's source VOne.GraphNode.",
+                    "type": "VOne.GraphNode"
+                },
+                {
+                    "name": "targetNode",
+                    "description": "The edge's target VOne.GraphNode.",
+                    "type": "VOne.GraphNode"
+                }
+            ],
+            "return": {
+                "description": "The found or created VOne.GraphEdge.",
+                "type": "VOne.GraphEdge"
+            },
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 201,
+            "description": "Gets all the outgoing edges for a given VOne.GraphNode.",
+            "itemtype": "method",
+            "name": "getOutgoingEdges",
+            "params": [
+                {
+                    "name": "node",
+                    "description": "The node.",
+                    "type": "VOne.GraphNode"
+                }
+            ],
+            "return": {
+                "description": "All outgoing edges from the given node.",
+                "type": "[VOne.GraphEdge]"
+            },
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 227,
+            "description": "Gets all the incoming edges for a given VOne.GraphNode.",
+            "itemtype": "method",
+            "name": "getIncoming",
+            "params": [
+                {
+                    "name": "node",
+                    "description": "The node.",
+                    "type": "VOne.GraphNode"
+                }
+            ],
+            "return": {
+                "description": "All incoming edges to the given node.",
+                "type": "[VOne.GraphEdge]"
+            },
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 254,
+            "description": "Gets all the incoming and outgoing edges for a given VOne.GraphNode.",
+            "itemtype": "method",
+            "name": "getEdges",
+            "params": [
+                {
+                    "name": "node",
+                    "description": "The node.",
+                    "type": "VOne.GraphNode"
+                }
+            ],
+            "return": {
+                "description": "All incoming and outgoing edges related to the given node.",
+                "type": "[VOne.GraphEdge]"
+            },
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 279,
+            "description": "Gets all the nodes with incoming edges.",
+            "itemtype": "method",
+            "name": "getTargetNodes",
+            "return": {
+                "description": "All nodes with incoming edges.",
+                "type": "[VOne.GraphNode]"
+            },
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 304,
+            "description": "Gets all the nodes with outgoing edges.",
+            "itemtype": "method",
+            "name": "getSources",
+            "return": {
+                "description": "All nodes with outgoing edges.",
+                "type": "[VOne.GraphNode]"
+            },
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 321,
+            "description": "Determines if a given node is a last target node (a node without outgoing edges).",
+            "itemtype": "method",
+            "name": "isLastTarget",
+            "return": {
+                "description": "True if node is last target. False otherwise.",
+                "type": "Boolean"
+            },
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/forceDirectedLayout/graph.js",
+            "line": 343,
+            "description": "Determines if a given node is a source node (a node without incoming edges).",
+            "itemtype": "method",
+            "name": "isSource",
+            "return": {
+                "description": "True if node is source. False otherwise.",
+                "type": "Boolean"
+            },
+            "class": "VOne.Graph"
+        },
+        {
+            "file": "Distributions/circlePackLayout.js",
+            "line": 1,
+            "description": "Creates a circle packed layout based on calculating a tangent circle for two previus tangent circles.",
+            "itemtype": "method",
+            "name": "circlePackLayout",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "The dataset to distribute.",
+                    "type": "Array"
+                },
+                {
+                    "name": "config",
+                    "description": "Settings for generating the layout",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "childPropertyName",
+                            "description": "The values property name to search for for each parent. Default is 'values'.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "nestedData",
+                            "description": "Indicates if data is nested. If set to true, childPropertyName must be set (unless child property name is 'values').",
+                            "type": "Boolean"
+                        },
+                        {
+                            "name": "radiusPropertyName",
+                            "description": "The name for the property that stores (or will store) the radius on each element. Default is 'radius';",
+                            "type": "String"
+                        },
+                        {
+                            "name": "setRadius",
+                            "description": "A function that will receive each record from the data array for setting its corresponding center position. Must return a number. If not set, it's assumed that a radius property already exists.",
+                            "type": "Function|number"
+                        },
+                        {
+                            "name": "positionPropertyName",
+                            "description": "The name that will store the center position of each record. Default is 'center'.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "centerX",
+                            "description": "X position for the first element. Default is 0.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "centerY",
+                            "description": "Y position for the first element. Default is 0.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "padding",
+                            "description": "Distance between circles. Default is 0.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "toleranceDistanceFactor",
+                            "description": "Tolerance for meassuring distances between circles to prevent overlapping. Defaults to 0.001",
+                            "type": "Number"
+                        }
+                    ]
+                }
+            ],
+            "class": "VOne"
+        },
+        {
+            "file": "Distributions/deathSphere.js",
+            "line": 18,
+            "description": "Generates VOne.GeometryModels representing death spheres.",
+            "itemtype": "method",
+            "name": "generate",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "A nested array.",
+                    "type": "Array"
+                },
+                {
+                    "name": "config",
+                    "description": "An object containing configuration properties:",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "childrenPropertyName",
+                            "description": "The name of the children array property for each parent element. Default is 'values'.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "parentPropertyName",
+                            "description": "The parents name property. Default is 'key'.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "valueProperty",
+                            "description": "The property name that stores each child and parent value to be used for width an height of every slice. If parents are missing this property, the sum of each child value property will be calculated. Default is 'totalValue'.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "marginDegrees",
+                            "description": "Degrees to be left as margin in the sphere top and bottom. Default is 20.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "radius",
+                            "description": "The sphere radius. Default is 500.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "segmentsResolution",
+                            "description": "Number of segments to be used for each slice generated. Default is 32.",
+                            "type": "Number"
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "An object containing two VOne.GeometryModel objects. mainGeometryModel: contains the first level slices, secondaryGeometryModel: The second level slices. This geometry models have no mesh array property set.",
+                "type": "Object"
+            },
+            "class": "VOne.DeathSphere"
+        },
+        {
+            "file": "Distributions/fibSphere.js",
+            "line": 1,
+            "description": "Creates a series of points almost evenly distributed among a sphere surface.",
+            "itemtype": "method",
+            "name": "fibSphere",
+            "params": [
+                {
+                    "name": "pointsCount",
+                    "description": "Number of points to draw",
+                    "type": "Number"
+                },
+                {
+                    "name": "startPosition",
+                    "description": "Center of the sphere",
+                    "type": "THREE.Vector3"
+                },
+                {
+                    "name": "radius",
+                    "description": "Radius for the sphere",
+                    "type": "Number"
+                },
+                {
+                    "name": "irregular",
+                    "description": "If set to true, irregular-like distribution will be used.",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "An array of positions where x = index * 3, y = index * 3 + 1 and z = index * 3 + 2 (An array to be used as position attribute in a buffer geometry).",
+                "type": "Float32Array"
+            },
+            "class": "VOne"
+        },
+        {
+            "file": "Distributions/halfTube.js",
+            "line": 1,
+            "description": "Creates a series of points almost evenly distributed among a partial cilinder surface.",
+            "itemtype": "method",
+            "name": "halfTube",
+            "params": [
+                {
+                    "name": "pointsCount",
+                    "description": "Number of points to map",
+                    "type": "Number"
+                },
+                {
+                    "name": "center",
+                    "description": "Center of the cilinder",
+                    "type": "THREE.Vector3"
+                },
+                {
+                    "name": "config",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "height",
+                            "description": "Height of the cilinder. Default is 500.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "radius",
+                            "description": "Radius of the cilinder. Default is 1000;",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "startPhi",
+                            "description": "Starting angle in degress of the partial cilinder. Default is 180.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "endPhi",
+                            "description": "Ending angle in degress of the partial cilinder. Default is 360.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "pointsPerRow",
+                            "description": "Points to draw for each row of points in the cilinder. Default is 12.",
+                            "type": "Number"
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "An array of positions where x = index * 3, y = index * 3 + 1 and z = index * 3 + 2 (An array to be used as position attribute in a buffer geometry).",
+                "type": "Float32Array"
+            },
+            "class": "VOne"
+        },
+        {
+            "file": "Distributions/radialDistribution.js",
+            "line": 21,
+            "description": "Model (Array) to be used in a GeometryModel containing each element/record with position properties set.",
+            "itemtype": "property",
+            "name": "graphModel",
+            "class": "VOne.RadialDistribution"
+        },
+        {
+            "file": "Distributions/radialDistribution.js",
+            "line": 29,
+            "description": "Sets the data model to work with.",
+            "itemtype": "method",
+            "name": "data",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "the array with the specified form",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "a RadialDistribution object",
+                "type": "Object"
+            },
+            "class": "VOne.RadialDistribution"
+        },
+        {
+            "file": "Distributions/radialDistribution.js",
+            "line": 46,
+            "description": "Asigns positions in a radial distribution to each object of the provided array.",
+            "itemtype": "method",
+            "name": "generateDistribution",
+            "params": [
+                {
+                    "name": "config",
+                    "description": "options to create the distribution:",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "distanceFromParent",
+                            "description": "Distance between data levels. Default is 3500.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "firstNodeInCenter",
+                            "description": "Indicates if the first level should be positioned at the distribution's center (this should be set to true when there's a main container element).",
+                            "type": "Boolean"
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "VOne.RadialDistribution"
+            },
+            "class": "VOne.RadialDistribution"
+        },
+        {
+            "file": "Distributions/radialDistribution.js",
+            "line": 90,
+            "description": "Generates a buffer geometry from the provided model data and adds the generated geometry to a VOne.Scene.",
+            "itemtype": "method",
+            "name": "attachToScene",
+            "params": [
+                {
+                    "name": "config",
+                    "description": "Check VOne.GeometriesGenerator.GenerateGeometries config object.",
+                    "type": "Object"
+                },
+                {
+                    "name": "sceneManager,",
+                    "description": "the VOne.SceneManager that will add the generated geometries to scene.",
+                    "type": "VOne.SceneManager"
+                },
+                {
+                    "name": "name",
+                    "description": "The name to identify the object in the scene.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The VOne.GeometryModel corresponding to the provided model and the generated geometries.",
+                "type": "Vone.GeometryModel"
+            },
+            "class": "VOne.RadialDistribution"
+        },
+        {
+            "file": "Distributions/spiral.js",
+            "line": 1,
+            "description": "Creates a spiral layout based on the Archimedes Spiral by assigning a position for each record in the provided data set.",
+            "itemtype": "method",
+            "name": "spiral",
+            "params": [
+                {
+                    "name": "data",
+                    "description": "The dataset to distribute.",
+                    "type": "Array"
+                },
+                {
+                    "name": "config",
+                    "description": "Settings for generating the layout",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "centerX",
+                            "description": "The X center position. Default is 0.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "centerY",
+                            "description": "The Y center position. Default is 0.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "sizePropertyName",
+                            "description": "The property name for each record. Default is radius. It can be set using config.setSize.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "setSize",
+                            "description": "A function that can be used to set the radius for each element.<br/> ex: <br/>config: { ..., <br/> setSize: function(element, index) { <br/> return element.total * 6.66; <br/>}, <br/>... } <br/>",
+                            "type": "Function || Number"
+                        },
+                        {
+                            "name": "positionPropertyName",
+                            "description": "The position property name where the result of each record in the data set will be stored.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "linearPadding",
+                            "description": "Distance between elements along the spiral. Default is 0.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "radialPadding",
+                            "description": "Padding applied each spiral cicle (proportional).",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "z",
+                            "description": "Z position for the spiral. Default is 0.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "looseSpiral",
+                            "description": "If set to true, padding params will be ignored and a loose spiral (Archimedes spiral) will be created.",
+                            "type": "Bool"
+                        },
+                        {
+                            "name": "startRadius",
+                            "description": "Initial radius (a margin radius at the center). Default is 0.",
+                            "type": "Number"
+                        }
+                    ]
+                }
+            ],
+            "class": "VOne"
+        },
+        {
+            "file": "GeometryUtils/cpsBufferGeometriesGenerator.js",
+            "line": 12,
+            "description": "Generates the geometries from the provided model and atach them to the scene.",
+            "itemtype": "method",
+            "name": "generateGeometries",
+            "params": [
+                {
+                    "name": "config",
+                    "description": "Config object",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "interactive",
+                            "description": "Indicates if the generated geometries will be interactive.",
+                            "type": "Boolean"
+                        },
+                        {
+                            "name": "hasRelations",
+                            "description": "Indicates if elements will have relations with their corresponding parent.",
+                            "type": "Boolean"
+                        },
+                        {
+                            "name": "elementZPos",
+                            "description": "Function that will be processed to determine the z position for each element. Must return a Float number. By default returns a random number between 0 and 1000",
+                            "type": "Function"
+                        },
+                        {
+                            "name": "elementColor",
+                            "description": "A method used to determine the element's color. By default returns 'pink'.",
+                            "type": "Function"
+                        },
+                        {
+                            "name": "elementAlpha",
+                            "description": "Elements alpha. Must have a value between 0 and 1.",
+                            "type": "Float"
+                        },
+                        {
+                            "name": "texturePath",
+                            "description": "Path to an image to be used as texture for elements.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "relationsLinesColor",
+                            "description": "A function that must return an array with 2 values for collor for the corresponding relation lines. The first element of the array is equivalent to the elements vertex, the second one the color for the parent element vertex.",
+                            "type": "Function",
+                            "optional": true
+                        },
+                        {
+                            "name": "relationsLineWidth",
+                            "description": "Line width for relations. Default is 0.5",
+                            "type": "Number",
+                            "optional": true
+                        },
+                        {
+                            "name": "relationsLinesAlpha",
+                            "description": "Alpha for relations lines. Default is 0.9",
+                            "type": "Number",
+                            "optional": true
+                        }
+                    ]
+                },
+                {
+                    "name": "scene",
+                    "description": "The scene to attach the generated Points geometry.",
+                    "type": "VOne.SceneManager"
+                },
+                {
+                    "name": "model",
+                    "description": "An array containing model data.",
+                    "type": "Array"
+                },
+                {
+                    "name": "name",
+                    "description": "The name for the generated geometry.",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "The VOne.GeometryModel corresponding to the provided model.",
+                "type": "VOne.GeometryModel"
+            },
+            "class": "VOne.CPSBufferGeometriesGenerator"
+        },
+        {
+            "file": "GeometryUtils/genericBufferGeometriesGenerator.js",
+            "line": 231,
+            "description": "Sets the model to work with.",
+            "itemtype": "method",
+            "name": "setModel",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "The model to be set.",
+                    "type": "Array"
+                }
+            ],
+            "class": "VOne.GenericBufferGeometriesGenerator"
+        },
+        {
+            "file": "GeometryUtils/genericBufferGeometriesGenerator.js",
+            "line": 244,
+            "description": "Sets a function or default value to set position for each model's element.",
+            "itemtype": "method",
+            "name": "setPosition",
+            "params": [
+                {
+                    "name": "f",
+                    "description": "The method to set position for each model's element. Must return a THREE.Vector3 object.",
+                    "type": "function || THREE.Vector3"
+                }
+            ],
+            "class": "VOne.GenericBufferGeometriesGenerator"
+        },
+        {
+            "file": "GeometryUtils/genericBufferGeometriesGenerator.js",
+            "line": 257,
+            "description": "Sets a function or default value to set color for each model's element.",
+            "itemtype": "method",
+            "name": "setColor",
+            "params": [
+                {
+                    "name": "f",
+                    "description": "The method to set the color for each model's element. Must return a THREE.Color object.",
+                    "type": "function || THREE.Color"
+                }
+            ],
+            "class": "VOne.GenericBufferGeometriesGenerator"
+        },
+        {
+            "file": "GeometryUtils/genericBufferGeometriesGenerator.js",
+            "line": 270,
+            "description": "Sets a function or default value to set the size for each model's element.",
+            "itemtype": "method",
+            "name": "setSize",
+            "params": [
+                {
+                    "name": "f",
+                    "description": "The method to set the size for each model's element. Must return a float value.",
+                    "type": "Function || float"
+                }
+            ],
+            "class": "VOne.GenericBufferGeometriesGenerator"
+        },
+        {
+            "file": "GeometryUtils/genericBufferGeometriesGenerator.js",
+            "line": 283,
+            "description": "Sets a function or default value to set the alpha value for each model's element.",
+            "itemtype": "method",
+            "name": "setAlpha",
+            "params": [
+                {
+                    "name": "f",
+                    "description": "The method to set the alpha for each model's element. Must return a float value.",
+                    "type": "Function || float"
+                }
+            ],
+            "class": "VOne.GenericBufferGeometriesGenerator"
+        },
+        {
+            "file": "GeometryUtils/genericBufferGeometriesGenerator.js",
+            "line": 296,
+            "description": "Generates the buffer geometry using the methods provided to set the geometry properties.",
+            "itemtype": "method",
+            "name": "generate",
+            "return": {
+                "description": "A VOne.BufferGeometryModel with the properties provided set.",
+                "type": "VOne.BufferGeometryModel"
+            },
+            "class": "VOne.GenericBufferGeometriesGenerator"
+        },
+        {
+            "file": "GeometryUtils/pieSlice.js",
+            "line": 160,
+            "description": "Returns the buffer geometry for generating a mesh.",
+            "itemtype": "method",
+            "name": "getGeometry",
+            "return": {
+                "description": "The buffer geometry to be used for generating a mesh.",
+                "type": "THREE.BufferGeometry"
+            },
+            "class": "VOne.PieSlice"
+        },
+        {
+            "file": "GeometryUtils/pieSlice.js",
+            "line": 174,
+            "description": "Returns a points geometry for drawing surrounding pie slice lines.",
+            "itemtype": "method",
+            "name": "getEdgesGeometry",
+            "params": [
+                {
+                    "name": "color",
+                    "description": "Edges color.",
+                    "type": "THREE.Color"
+                },
+                {
+                    "name": "alpha",
+                    "description": "Lines alpha.",
+                    "type": "Float"
+                }
+            ],
+            "return": {
+                "description": "The buffer geometry to be used for generating edges.",
+                "type": "THREE.EdgesGeometry"
+            },
+            "class": "VOne.PieSlice"
+        },
+        {
+            "file": "GeometryUtils/relationshipBufferGeometriesGenerator.js",
+            "line": 189,
+            "description": "Sets the model to work with.",
+            "itemtype": "method",
+            "name": "setDataModel",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "The model to be set for generating the line geometries.",
+                    "type": "Array"
+                }
+            ],
+            "class": "VOne.RelationshipBufferGeometriesGenerator"
+        },
+        {
+            "file": "GeometryUtils/relationshipBufferGeometriesGenerator.js",
+            "line": 204,
+            "description": "Sets a function or default value for setting each line vertex color.",
+            "itemtype": "method",
+            "name": "setColor",
+            "params": [
+                {
+                    "name": "f",
+                    "description": "The method to set the color for each model's element. Must return an array with two THREE.Color objects, the first one for the child vertex and the second for the parent vertex.",
+                    "type": "function || [THREE.Color, THREE.Color]"
+                }
+            ],
+            "class": "VOne.RelationshipBufferGeometriesGenerator"
+        },
+        {
+            "file": "GeometryUtils/relationshipBufferGeometriesGenerator.js",
+            "line": 218,
+            "description": "Sets a function or default value to set the alpha value for each model's element.",
+            "itemtype": "method",
+            "name": "setAlpha",
+            "params": [
+                {
+                    "name": "f",
+                    "description": "The method to set the alpha for each model's element. Must return an array with two float values, the first one for the child element vertex alpha, the second for the element's parent vertex alpha.",
+                    "type": "Function || [float, float]"
+                }
+            ],
+            "class": "VOne.RelationshipBufferGeometriesGenerator"
+        },
+        {
+            "file": "GeometryUtils/relationshipBufferGeometriesGenerator.js",
+            "line": 232,
+            "description": "Generates the geometry using the methods provided to set the model and color properties. The model' elements must have a <parent> property pointing to another element in the model. Elements without parent property are ignored.",
+            "itemtype": "method",
+            "name": "generate",
+            "return": {
+                "description": "A THREE.BufferGeometry with the properties provided.",
+                "type": "THREE.BufferGeometry"
+            },
+            "class": "VOne.RelationshipBufferGeometriesGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 30,
+            "description": "Data model to be used with a THREE.BufferGeometry object. Updated each time that records are added via processRecords method.",
+            "itemtype": "property",
+            "name": "dataModel",
+            "type": "Proxy",
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 44,
+            "description": "Max number of records to manage.",
+            "itemtype": "property",
+            "name": "recordsCount",
+            "type": "int",
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 52,
+            "description": "Amount of records to send to the thread to process in case of two or more partial record loads.",
+            "itemtype": "property",
+            "name": "recordsPartialDeliverCount",
+            "type": "int",
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 63,
+            "description": "The background thread program. Ideally you won't need to interact with or modify it.",
+            "itemtype": "property",
+            "name": "worker",
+            "type": "Worker",
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 71,
+            "description": "String containing the script that should be used to set positions for each record. This is set via setPositionScript. This property has been exposed in case you need to set other than default behaviour for setting positions.",
+            "itemtype": "property",
+            "name": "positionsProgram",
+            "type": "String",
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 79,
+            "description": "String containing the script that should be used to set color properties for each record. This is set via setColorScript. This property has been exposed in case you need to set other than default behaviour for setting colors.",
+            "itemtype": "property",
+            "name": "colorsProgram",
+            "type": "String",
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 87,
+            "description": "String containing the script that should be used to set size properties for each record. This is set via setSizeScript. This property has been exposed in case you need to set other than default behaviour for setting sizes.",
+            "itemtype": "property",
+            "name": "sizesProgram",
+            "type": "String",
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 95,
+            "description": "String containing the script that should be used to set alpha properties for each record. This is set via setAlphaScript. This property has been exposed in case you need to set other than default behaviour for setting alpha.",
+            "itemtype": "property",
+            "name": "alphasProgram",
+            "type": "String",
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 307,
+            "description": "Sets a function implementation which will assign a position for each dataset element.",
+            "itemtype": "method",
+            "name": "setPositionScript",
+            "params": [
+                {
+                    "name": "positionScript",
+                    "description": "The method to set position for each element on the dataset <string>in a string format</strong>. Must return an object with x, y and z properties. The method will receive the record from the dataset and the corresponding index as params. <br/><p>Example</p><p>&#09;myBackgroundModelGenerator.setPositionScript(\"return { x: Math.random(), y: record.amount * 13, z: index * 666 } \"); </p><p>Because of the nature of threads, global and window variables won't be available in the scope of this function.</p>",
+                    "type": "String"
+                }
+            ],
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 346,
+            "description": "Sets a function implementation which will assign a color for each dataset element.",
+            "itemtype": "method",
+            "name": "setColorScript",
+            "params": [
+                {
+                    "name": "colorScript",
+                    "description": "The method to set position for each element on the dataset <string>in a string format</strong>. Must return an object with r, g and b properties where 0 < r, g, b <= 1. The method will receive the record from the dataset and the corresponding index as params. <br/><p>Example</p><p>&#09;myBackgroundModelGenerator.setColorScript(\"return { r: Math.random(), g: record.amount * 13 / 66, z: index * 0.00666 } \"); </p><p>Because of the nature of threads, global and window variables won't be available in the scope of this function.</p>",
+                    "type": "String"
+                }
+            ],
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 386,
+            "description": "Sets a function implementation which will assign a color for each dataset element.",
+            "itemtype": "method",
+            "name": "setSizeScript",
+            "params": [
+                {
+                    "name": "sizeScript",
+                    "description": "The method to set position for each element on the dataset <string>in a string format</strong>. Must return an float value. The method will receive the record from the dataset and the corresponding index as params. <br/><p>Example</p><p>&#09;myBackgroundModelGenerator.setSizeScript(\"return record.amount * index * 0.5; \"); </p><p>Because of the nature of threads, global and window variables won't be available in the scope of this function.</p>",
+                    "type": "String"
+                }
+            ],
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 422,
+            "description": "Sets a function implementation which will assign a color for each dataset element.",
+            "itemtype": "method",
+            "name": "setAlphaScript",
+            "params": [
+                {
+                    "name": "alphaScript",
+                    "description": "The method to set alpha for each element on the dataset <string>in a string format</strong>. Must return an float value where 0 < value <= 1. The method will receive the record from the dataset and the corresponding index as params. <br/><p>Example</p><p>&#09;myBackgroundModelGenerator.setAlphaScript(\"return record.amount * index * 0.5; \"); </p><p>Because of the nature of threads, global and window variables won't be available in the scope of this function.</p>",
+                    "type": "String"
+                }
+            ],
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 459,
+            "description": "Initializes the background thread with the provided scripts for processing the records and reserves the needed amount of memory for storing all the needed properties and records.",
+            "itemtype": "method",
+            "name": "init",
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 719,
+            "description": "Appends records to the thread's data model and processes them with the position, color, size and alpha script provided before initialization.",
+            "itemtype": "method",
+            "name": "processRecords",
+            "params": [
+                {
+                    "name": "records",
+                    "description": "The array of records to be appended to the model.",
+                    "type": "Array"
+                },
+                {
+                    "name": "Initial",
+                    "description": "position in the thread's array for the appended records.",
+                    "type": "Offset"
+                }
+            ],
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/backgroundModelGenerator.js",
+            "line": 734,
+            "description": "Sets an extra object in the worker in case you need it for operations to set positions, colors, etc. It will be available as a variable named extras. Must be called after init() method.",
+            "itemtype": "method",
+            "name": "setExtrasForWorker",
+            "params": [
+                {
+                    "name": "extras",
+                    "description": "An object to be available as 'extras'.",
+                    "type": "Object"
+                }
+            ],
+            "class": "VOne.BackgroundModelGenerator"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 11,
+            "description": "Data model to be used with a THREE.BufferGeometry object.",
+            "itemtype": "property",
+            "name": "dataModel",
+            "type": "Array",
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 18,
+            "description": "Position array for its use in a THREE.BufferGeometry object.",
+            "itemtype": "property",
+            "name": "positionArray",
+            "type": "Float32Array",
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 26,
+            "description": "Color array for its use in a THREE.BufferGeometry object.",
+            "itemtype": "property",
+            "name": "colorArray",
+            "type": "Float32Array",
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 34,
+            "description": "Size array for its use in a THREE.BufferGeometry object.",
+            "itemtype": "property",
+            "name": "sizeArray",
+            "type": "Float32Array",
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 42,
+            "description": "Alpha array for its use in a THREE.BufferGeometry object.",
+            "itemtype": "property",
+            "name": "alphaArray",
+            "type": "Float32Array",
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 49,
+            "description": "The model BufferGeometry object.",
+            "itemtype": "property",
+            "name": "geometry",
+            "type": "THREE.BufferGeometry",
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 57,
+            "description": "Scene Object (THREE.Points o any other buffer geometry).",
+            "itemtype": "property",
+            "name": "mesh",
+            "type": "THREE.Points",
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 65,
+            "description": "Flag that indicates that some change is happening in the data model's values.",
+            "itemtype": "property",
+            "name": "animating",
+            "type": "boolean",
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 81,
+            "description": "Sets a position array for the model.",
+            "itemtype": "method",
+            "name": "setPositionArray",
+            "params": [
+                {
+                    "name": "positionArray",
+                    "description": "The array to be used for geometries/points' position.",
+                    "type": "Float32Array"
+                }
+            ],
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 93,
+            "description": "Gets the position array from the model.",
+            "itemtype": "method",
+            "name": "getPositionArray",
+            "return": {
+                "description": "The array to be used for geometries/points' position setting.",
+                "type": "Float32Array"
+            },
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 106,
+            "description": "Sets a color array for the model.",
+            "itemtype": "method",
+            "name": "setColorArray",
+            "params": [
+                {
+                    "name": "colorArray",
+                    "description": "The array to be used for geometries/points' color setting.",
+                    "type": "Float32Array"
+                }
+            ],
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 119,
+            "description": "Gets the color array from the model.",
+            "itemtype": "method",
+            "name": "getColorArray",
+            "return": {
+                "description": "The array to be used for geometries/points' color setting.",
+                "type": "Float32Array"
+            },
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 132,
+            "description": "Sets a size array for the model.",
+            "itemtype": "method",
+            "name": "setSizeArray",
+            "params": [
+                {
+                    "name": "sizeArray",
+                    "description": "The array to be used for geometries/points' size.",
+                    "type": "Float32Array"
+                }
+            ],
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 144,
+            "description": "Gets the size array from the model.",
+            "itemtype": "method",
+            "name": "getSizeArray",
+            "return": {
+                "description": "The array to be used for geometries/points' size setting.",
+                "type": "Float32Array"
+            },
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 156,
+            "description": "Sets an alpha array for the model.",
+            "itemtype": "method",
+            "name": "setAlphaArray",
+            "params": [
+                {
+                    "name": "alphaArray",
+                    "description": "The array to be used for geometries/points' alpha.",
+                    "type": "Float32Array"
+                }
+            ],
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 168,
+            "description": "Gets the alpha array from the model.",
+            "itemtype": "method",
+            "name": "getAlphaArray",
+            "return": {
+                "description": "The array to be used for geometries/points' alpha setting.",
+                "type": "Float32Array"
+            },
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 181,
+            "description": "Sets the data model to be used with the other properties set.",
+            "itemtype": "method",
+            "name": "setDataModel",
+            "params": [
+                {
+                    "name": "dataModel",
+                    "description": "Data model.",
+                    "type": "Array"
+                }
+            ],
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 193,
+            "description": "Gets the data model.",
+            "itemtype": "method",
+            "name": "getDataModel",
+            "return": {
+                "description": "The data model.",
+                "type": "Array"
+            },
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 206,
+            "description": "Sets the Geometry to be used with the other properties set.",
+            "itemtype": "method",
+            "name": "setGeometry",
+            "params": [
+                {
+                    "name": "geometry",
+                    "description": "The buffer geometry.",
+                    "type": "THREE.BufferGeometry"
+                }
+            ],
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 218,
+            "description": "Gets the geometry.",
+            "itemtype": "method",
+            "name": "getGeometry",
+            "return": {
+                "description": "The model's geometry.",
+                "type": "THREE.BufferGeometry"
+            },
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 231,
+            "description": "Sets the Scene object (usually a THREE.Points) to be used with the other properties set.",
+            "itemtype": "method",
+            "name": "setMesh",
+            "params": [
+                {
+                    "name": "geometry",
+                    "description": "The buffer geometry scene object.",
+                    "type": "THREE.Points"
+                }
+            ],
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 253,
+            "description": "Gets the Scene object (usually a THREE.Points) to be used with the other properties set.",
+            "itemtype": "method",
+            "name": "getMesh",
+            "return": {
+                "description": "mesh/points The buffer geometry scene object.",
+                "type": "THREE.Object3D"
+            },
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 266,
+            "description": "Sets the animating flag which indicates that some change is happening in the data model's values.",
+            "itemtype": "method",
+            "name": "setAnimating",
+            "params": [
+                {
+                    "name": "animating",
+                    "description": "Animating value.",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/bufferGeometryModel.js",
+            "line": 279,
+            "description": "Allows to define actions to be executed when a point cloud element is intersected.",
+            "itemtype": "method",
+            "name": "setInteraction",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "The name of the event to react to (mouse over, mouse out, mouse click).",
+                    "type": "String"
+                },
+                {
+                    "name": "action",
+                    "description": "The action(s) to be executed when the corresponding event is triggered. The function will receive two params. First one is the datamodel object corresponding to the intersected scene object, the second will be the datamodel object index. <br/><p>Example:</p><p>&emsp;geometryModel.setInteraction('onMouseOver', function(element, index){<br/> &emsp;&emsp;      // Do watever you want with the element and / or the model based on the index supplied.  <br/>&emsp;}); </p>",
+                    "type": "Function"
+                }
+            ],
+            "class": "VOne.BufferGeometryModel"
+        },
+        {
+            "file": "Model/geometryModel.js",
+            "line": 25,
+            "description": "Datamodel array corresponding to the model.",
+            "itemtype": "property",
+            "name": "dataModel",
+            "type": "{Array}",
+            "class": "VOne.GeometryModel"
+        },
+        {
+            "file": "Model/geometryModel.js",
+            "line": 36,
+            "description": "THREE.Object3D array used on the scene.",
+            "itemtype": "property",
+            "name": "mesh",
+            "type": "{Array}",
+            "class": "VOne.GeometryModel"
+        },
+        {
+            "file": "Model/geometryModel.js",
+            "line": 46,
+            "description": "THREE.Geometry array.",
+            "itemtype": "property",
+            "name": "geometries",
+            "type": "{Array}",
+            "class": "VOne.GeometryModel"
+        },
+        {
+            "file": "Model/geometryModel.js",
+            "line": 57,
+            "description": "Allows to define actions to be executed when a point cloud element is intersected.",
+            "itemtype": "method",
+            "name": "setInteraction",
+            "params": [
+                {
+                    "name": "eventName",
+                    "description": "The name of the event to react to (mouse over, mouse out, mouse click).",
+                    "type": "String"
+                },
+                {
+                    "name": "action",
+                    "description": "The action to be executed when the corresponding event is triggered.",
+                    "type": "Function"
+                }
+            ],
+            "class": "VOne.GeometryModel"
+        },
+        {
+            "file": "Model/geometryModel.js",
+            "line": 77,
+            "description": "Sets the geometries for this model.",
+            "itemtype": "method",
+            "name": "setGeometries",
+            "params": [
+                {
+                    "name": "geometries",
+                    "description": "The geometries Array to be set.",
+                    "type": "Array"
+                }
+            ],
+            "class": "VOne.GeometryModel"
+        },
+        {
+            "file": "Model/preparedBufferGeometryModel.js",
+            "line": 20,
+            "description": "Max number of vertices that the BufferGeometry will be able to manage.",
+            "itemtype": "property",
+            "name": "maxVerticesNumber",
+            "type": "int",
+            "class": "VOne.PreparedBufferGeometryModel"
+        },
+        {
+            "file": "Model/preparedBufferGeometryModel.js",
+            "line": 29,
+            "description": "Function/value to be executed/applied for setting position values for the corresponding model element vertex.",
+            "itemtype": "property",
+            "name": "setPositionFor",
+            "type": "function | THREE.Vector3",
+            "class": "VOne.PreparedBufferGeometryModel"
+        },
+        {
+            "file": "Model/preparedBufferGeometryModel.js",
+            "line": 38,
+            "description": "Function/value to be executed/applied for setting color values for the corresponding model element vertex.",
+            "itemtype": "property",
+            "name": "setColorFor",
+            "type": "function | THREE.Color",
+            "class": "VOne.PreparedBufferGeometryModel"
+        },
+        {
+            "file": "Model/preparedBufferGeometryModel.js",
+            "line": 47,
+            "description": "Function/value to be executed/applied for setting size value for the corresponding model element vertex.",
+            "itemtype": "property",
+            "name": "setSizeFor",
+            "type": "function | float",
+            "class": "VOne.PreparedBufferGeometryModel"
+        },
+        {
+            "file": "Model/preparedBufferGeometryModel.js",
+            "line": 56,
+            "description": "Function/value to be executed/applied for setting alpha value for the corresponding model element vertex.",
+            "itemtype": "property",
+            "name": "setAlphaFor",
+            "type": "function | float",
+            "class": "VOne.PreparedBufferGeometryModel"
+        },
+        {
+            "file": "Model/preparedBufferGeometryModel.js",
+            "line": 77,
+            "description": "Sets a function or default value to set position for each model's element.",
+            "itemtype": "method",
+            "name": "setPosition",
+            "params": [
+                {
+                    "name": "f",
+                    "description": "The method to set position for each model's element. Must return a THREE.Vector3 object.",
+                    "type": "function || THREE.Vector3"
+                }
+            ],
+            "class": "VOne.PreparedBufferGeometryModel"
+        },
+        {
+            "file": "Model/preparedBufferGeometryModel.js",
+            "line": 99,
+            "description": "Sets a function or default value to set the size for each model's element.",
+            "itemtype": "method",
+            "name": "setSize",
+            "params": [
+                {
+                    "name": "f",
+                    "description": "The method to set the size for each model's element. Must return a float value.",
+                    "type": "Function || float"
+                }
+            ],
+            "class": "VOne.PreparedBufferGeometryModel"
+        },
+        {
+            "file": "Model/preparedBufferGeometryModel.js",
+            "line": 121,
+            "description": "Sets a function or default value to set color for each model's element.",
+            "itemtype": "method",
+            "name": "setColor",
+            "params": [
+                {
+                    "name": "f",
+                    "description": "The method to set the color for each model's element. Must return a THREE.Color object.",
+                    "type": "function || THREE.Color"
+                }
+            ],
+            "class": "VOne.PreparedBufferGeometryModel"
+        },
+        {
+            "file": "Model/preparedBufferGeometryModel.js",
+            "line": 143,
+            "description": "Sets a function or default value to set the alpha value for each model's element.",
+            "itemtype": "method",
+            "name": "setAlpha",
+            "params": [
+                {
+                    "name": "f",
+                    "description": "The method to set the alpha for each model's element. Must return a float value.",
+                    "type": "Function || float"
+                }
+            ],
+            "class": "VOne.PreparedBufferGeometryModel"
+        },
+        {
+            "file": "Model/preparedBufferGeometryModel.js",
+            "line": 165,
+            "description": "Sets the model to work with.",
+            "itemtype": "method",
+            "name": "setDataModel",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "The model to be set.",
+                    "type": "Array"
+                }
+            ],
+            "class": "VOne.PreparedBufferGeometryModel"
+        },
+        {
+            "file": "Model/preparedBufferGeometryModel.js",
+            "line": 189,
+            "description": "Appends new records to the data model.",
+            "itemtype": "method",
+            "name": "appendRecords",
+            "params": [
+                {
+                    "name": "Records",
+                    "description": "to be appended to the dataModel.",
+                    "type": "Array"
+                },
+                {
+                    "name": "processRecordsAfterAppend",
+                    "description": "If set to true, the records will be processed using the provided methods for setting their position, color, size and/or alpha and the geometry will be updated.",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "VOne.PreparedBufferGeometryModel"
+        },
+        {
+            "file": "Model/preparedBufferGeometryModel.js",
+            "line": 216,
+            "description": "Process the records in the data model by evaluating on each one the functions provided for setting position, size, color and/or alpha and updates the geometry with the results.",
+            "itemtype": "method",
+            "name": "processRecords",
+            "params": [
+                {
+                    "name": "offset",
+                    "description": "Starting record to process..",
+                    "type": "Int"
+                },
+                {
+                    "name": "count",
+                    "description": "The number of records to be processed starting from the provided offset.",
+                    "type": "Int"
+                }
+            ],
+            "class": "VOne.PreparedBufferGeometryModel"
+        },
+        {
+            "file": "Model/preparedBufferGeometryModel.js",
+            "line": 358,
+            "description": "Sets the number of records / vertices to be rendered.",
+            "itemtype": "method",
+            "name": "setGeometryDrawRangeCount",
+            "params": [
+                {
+                    "name": "count",
+                    "description": "Number of vertices to render.",
+                    "type": "Int"
+                }
+            ],
+            "class": "VOne.PreparedBufferGeometryModel"
+        },
+        {
+            "file": "Resources/defaultImages.js",
+            "line": 1,
+            "description": "Default images for VOne.",
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 15,
+            "description": "The scene that will be managed.",
+            "itemtype": "property",
+            "name": "_scene",
+            "type": "{THREE.Scene}",
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 32,
+            "description": "The scene's created (or reused) camera instance.",
+            "itemtype": "property",
+            "name": "camera",
+            "type": "{THREE.Camera}",
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 42,
+            "description": "Controls instance used for camera movement.",
+            "itemtype": "property",
+            "name": "controls",
+            "type": "{THREE.Controls}",
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 52,
+            "description": "A collection of objects containing functions to be executed on every render call. Use the @setOnRender method to add functions to this collection.",
+            "itemtype": "property",
+            "name": "onRender",
+            "type": "{Array}",
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 73,
+            "description": "Adds objects to the scene.",
+            "itemtype": "method",
+            "name": "add",
+            "params": [
+                {
+                    "name": "mesh",
+                    "description": "Object(s) to be added to the scene.",
+                    "type": "Object3D || [Object3D]"
+                },
+                {
+                    "name": "name",
+                    "description": "A name to indentify the objects.",
+                    "type": "String"
+                },
+                {
+                    "name": "parent",
+                    "description": "A previously added parent's object name.",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 144,
+            "description": "Register an object with a THREE.BufferGeometry (such as THEE.Points) to be used as an interactive object to the scene's raycaster",
+            "itemtype": "method",
+            "name": "registerInteractiveBufferGeometry",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "The geometry model to be registered.",
+                    "type": "VOne.BufferGeometryModel"
+                }
+            ],
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 169,
+            "description": "Un-registers objects from being used as interactive objects.",
+            "itemtype": "method",
+            "name": "unRegisterInteractiveBufferGeometry",
+            "params": [
+                {
+                    "name": "geometryModel",
+                    "description": "the geometry containing geometries to un-register.",
+                    "type": "VOne.GeometryModel"
+                }
+            ],
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 193,
+            "description": "Register geometries to be used as interactive objects. The geometry MUST have set an id property",
+            "itemtype": "method",
+            "name": "registerInteractiveGeometry",
+            "params": [
+                {
+                    "name": "geometryModel",
+                    "description": "the geometry containing geometries to interact with.",
+                    "type": "VOne.GeometryModel"
+                }
+            ],
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 217,
+            "description": "Returns the last object added to the scene.",
+            "itemtype": "method",
+            "name": "getLastObject",
+            "return": {
+                "description": "Last object added to the scene via the add method.",
+                "type": "Object"
+            },
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 233,
+            "description": "Returns the objects and groups count added to the scene.",
+            "itemtype": "method",
+            "name": "getObjectsCount",
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 247,
+            "description": "Returns the object corresponding to the name provided.",
+            "itemtype": "method",
+            "name": "getObject",
+            "params": [
+                {
+                    "name": "objectName",
+                    "description": "The object's given name.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The object corresponding to the provided name.",
+                "type": "Object"
+            },
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 263,
+            "description": "Removes a given object from the scene. The object must have been added using this class.",
+            "itemtype": "method",
+            "name": "removeObject",
+            "params": [
+                {
+                    "name": "objectName",
+                    "description": "The object's given name when added to the scene.",
+                    "type": "String"
+                }
+            ],
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 278,
+            "description": "Returns all the elements added to the scene using this class.",
+            "itemtype": "method",
+            "name": "getSceneObjects",
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 290,
+            "description": "Removes the last object added to the scene.",
+            "itemtype": "method",
+            "name": "removeLastObjectFromScene",
+            "params": [
+                {
+                    "name": "leaveSceneClear",
+                    "description": "If set to false or not defined, the first element added will remain in the scene.",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 339,
+            "description": "Removes all objects from the scene.",
+            "itemtype": "method",
+            "name": "clear",
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 360,
+            "description": "Sets the scene camera position",
+            "itemtype": "method",
+            "name": "setCameraPosition",
+            "params": [
+                {
+                    "name": "x",
+                    "description": "The camera's X new position",
+                    "type": "X"
+                },
+                {
+                    "name": "y",
+                    "description": "The camera's Y new position",
+                    "type": "Y"
+                },
+                {
+                    "name": "z",
+                    "description": "The camera's Z new position",
+                    "type": "Z"
+                }
+            ],
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 376,
+            "description": "Establishes what to do every render frame. This method can be called several times, each function added will be called every render frame.",
+            "itemtype": "method",
+            "name": "setOnRender",
+            "params": [
+                {
+                    "name": "actions",
+                    "description": "to do on every render frame.",
+                    "type": "Function"
+                },
+                {
+                    "name": "params",
+                    "description": "to be passed to the function.s",
+                    "type": "Object"
+                },
+                {
+                    "name": "name",
+                    "description": "An optional id for the particular function.",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 402,
+            "description": "Removes a function from the onRender loop. The function to be removed must have been added providing an id for the function.",
+            "itemtype": "method",
+            "name": "removeFromOnRenderById",
+            "params": [
+                {
+                    "name": "id",
+                    "description": "The function to be removed id.",
+                    "type": "String"
+                }
+            ],
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 448,
+            "description": "Pauses the scene render cicle. If you have multiple scenes and renderers, this could help to keep a good performance.",
+            "itemtype": "method",
+            "name": "pauseRenderer",
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 459,
+            "description": "Resumes the scene render cicle after a pause. If you have multiple scenes and renderers, this could help to keep a good performance.",
+            "itemtype": "method",
+            "name": "resumeRenderer",
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 471,
+            "description": "Returns the mouse position in normalized coordinates.",
+            "itemtype": "method",
+            "name": "getMouse",
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "SceneUtils/ThreeSceneManager.js",
+            "line": 483,
+            "description": "Returns the mouse position in screen coordinates.",
+            "itemtype": "method",
+            "name": "getMouseOnScreen",
+            "class": "VOne.ThreeSceneManager"
+        },
+        {
+            "file": "THREEUtils/THREEUtils.js",
+            "line": 1,
+            "description": "Adds a class to a THREE.JS mesh object by extending it's functionality.",
+            "itemtype": "method",
+            "name": "addClass",
+            "params": [
+                {
+                    "name": "className",
+                    "description": "A name to be attached as class name for a mesh.",
+                    "type": "String"
+                }
+            ],
+            "class": "THREE.Mesh"
+        },
+        {
+            "file": "THREEUtils/THREEUtils.js",
+            "line": 22,
+            "description": "Removes a class from a THREE.JS mesh object by extending it's functionality.",
+            "itemtype": "method",
+            "name": "removeClass",
+            "params": [
+                {
+                    "name": "className",
+                    "description": "The class name to be removed from a mesh.",
+                    "type": "String"
+                }
+            ],
+            "class": "THREE.Mesh"
+        },
+        {
+            "file": "Utils/logScale.js",
+            "line": 37,
+            "description": "Gets the corresponding value for the given domain and range values when instantiating this class.",
+            "itemtype": "method",
+            "name": "getValueFor",
+            "params": [
+                {
+                    "name": "rawValue",
+                    "description": "The value to calculate the corresponding scale.",
+                    "type": "Number"
+                }
+            ],
+            "class": "VOne.LogScale"
+        },
+        {
+            "file": "Utils/selection.js",
+            "line": 23,
+            "description": "Defines a function or value to be set as target position after animation to each mesh selected via VOne.select.",
+            "itemtype": "method",
+            "name": "setPositionAnimationTarget",
+            "params": [
+                {
+                    "name": "position",
+                    "description": "The target position for the mesh. It must be represented by a THREE.Vector3.",
+                    "type": "function || THREE.Vector3"
+                }
+            ],
+            "return": {
+                "description": "The selection object for setting more tasks.",
+                "type": "VOne.Selection"
+            },
+            "class": "VOne.Selection"
+        },
+        {
+            "file": "Utils/selection.js",
+            "line": 38,
+            "description": "Defines a function or value to be set as target position animation duraction for each mesh selected via VOne.select.",
+            "itemtype": "method",
+            "name": "setPositionAnimationDuration",
+            "params": [
+                {
+                    "name": "duration",
+                    "description": "Animation duration in miliseconds",
+                    "type": "Float"
+                }
+            ],
+            "return": {
+                "description": "The selection object for setting more tasks.",
+                "type": "VOne.Selection"
+            },
+            "class": "VOne.Selection"
+        },
+        {
+            "file": "Utils/selection.js",
+            "line": 54,
+            "description": "Defines a function or value to be set as target scale after animation to each mesh selected via VOne.select.",
+            "itemtype": "method",
+            "name": "setScaleAnimationTarget",
+            "params": [
+                {
+                    "name": "scale",
+                    "description": "The target position for the mesh. It must be represented by a THREE.Vector3.",
+                    "type": "function || THREE.Vector3"
+                }
+            ],
+            "return": {
+                "description": "The selection object for setting more tasks.",
+                "type": "VOne.Selection"
+            },
+            "class": "VOne.Selection"
+        },
+        {
+            "file": "Utils/selection.js",
+            "line": 70,
+            "description": "Defines a function or value to be set as target scale animation duraction for each mesh selected via VOne.select.",
+            "itemtype": "method",
+            "name": "setScaleAnimationDuration",
+            "params": [
+                {
+                    "name": "duration",
+                    "description": "Animation duration in miliseconds",
+                    "type": "Float"
+                }
+            ],
+            "return": {
+                "description": "The selection object for setting more tasks.",
+                "type": "VOne.Selection"
+            },
+            "class": "VOne.Selection"
+        },
+        {
+            "file": "Utils/selection.js",
+            "line": 87,
+            "description": "Starts running each transformation previously set.",
+            "itemtype": "method",
+            "name": "start",
+            "class": "VOne.Selection"
+        },
+        {
+            "file": "Utils/selector.js",
+            "line": 1,
+            "description": "Selector for meshes added to a THREEJS scene via the @SceneManager.",
+            "itemtype": "method",
+            "name": "select",
+            "params": [
+                {
+                    "name": "selectOptions",
+                    "description": "<p>The mesh(es) name(s) to be searched for. If the mesh of interest has set the <strong>name</strong> property, a '#' sign must be prepended. To search by the name assigned to the mesh when it was added to the scene via the @SceneManager, the selectOption must be prepended by underscore. If a class has been assigned to the mesh of interest, the selectOptions must be prepended by dot. </p><p>Example:<br/>var whiteDotMeshes = VOne.select('.whiteDot'); </p><p> will return an object containing all the meshes that matches the class 'whiteDot'. Also, the oject will contain methods for setting position and scale animation options.</p>",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "VOne.Selection Object containing all the meshes that matched the select options.",
+                "type": "VOne.Selection"
+            },
+            "class": "VOne"
+        },
+        {
+            "file": "Utils/shaderCreator.js",
+            "line": 19,
+            "description": "Creates vertex and fragment shaders according to submited options.",
+            "itemtype": "method",
+            "name": "createShader",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "color",
+                            "description": "Geometry' color property name. Default is undefined.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "varyingColor",
+                            "description": "An object containing varying color options. This property and options.color property are mutually exclusive. If an options.color object has been provided, it will be used for rendering color.",
+                            "type": "Object",
+                            "optional": true,
+                            "props": [
+                                {
+                                    "name": "startColor",
+                                    "description": "The geometry startColor property name.",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "endColor",
+                                    "description": "The geometry' endColor property name.",
+                                    "type": "String"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "varyingAttributes",
+                            "description": "Required attributes for varying colors, sizes or positions (position still not implemented);",
+                            "type": "Object",
+                            "props": [
+                                {
+                                    "name": "age",
+                                    "description": "The geometry' age property name.",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "duration",
+                                    "description": "The geometry' change duration property name.",
+                                    "type": "String"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "alpha",
+                            "description": "Geometry' alpha property name. Default is undefined and a value of 1.0 will be used.",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "points",
+                            "description": "Must be set to true if you're going to use THREE.Points geometry.",
+                            "type": "Boolean",
+                            "optional": true
+                        },
+                        {
+                            "name": "pointsFactor",
+                            "description": "Size factor to be applied to THREE.Points geometry points when using that type of geometry. Defaults to 600.",
+                            "type": "Float",
+                            "optional": true
+                        },
+                        {
+                            "name": "varyingSize",
+                            "description": "An object containing startSize and endSize properties. Start size value must be less than end size value. (only available for Points geometries).",
+                            "type": "Object",
+                            "optional": true,
+                            "props": [
+                                {
+                                    "name": "startSize",
+                                    "description": "The name for the starting size attribute.",
+                                    "type": "String"
+                                },
+                                {
+                                    "name": "endSize",
+                                    "description": "The name for the ending size attribue.",
+                                    "type": "String"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "useTexture",
+                            "description": "URL / path to texture file to use as texture.",
+                            "type": "URL",
+                            "optional": true
+                        },
+                        {
+                            "name": "useTHREETexture",
+                            "description": "A THREE.js texture to be used. Exclusive with options.use_texture.",
+                            "type": "THREE.Texture",
+                            "optional": true
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "An object containing vertexShader, fragmentShader and uniforms properties ready to be used with a THREE.ShaderMaterial.",
+                "type": "Object"
+            },
+            "class": "VOne.ShaderCreator"
+        },
+        {
+            "file": "sceneCreator.js",
+            "line": 19,
+            "description": "Creates a scene with specific parameters.",
+            "itemtype": "method",
+            "name": "createScene",
+            "params": [
+                {
+                    "name": "config",
+                    "description": "Config options for the scene that will be created",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "width",
+                            "description": "Sets the scene width. Defaults to window.innerWidth.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "height",
+                            "description": "Sets the scene height. Defaults to window.innerHeight.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "bgColor",
+                            "description": "Sets the background color for the scene. Default is 0x51008b.",
+                            "type": "THREE.Color"
+                        },
+                        {
+                            "name": "bgAlpha",
+                            "description": "Value betweeen 0 and 1 that defines the scene background alpha. Default is 1.",
+                            "type": "Float"
+                        },
+                        {
+                            "name": "glRenderer",
+                            "description": "Renderer to use in webGL scene.",
+                            "type": "Object"
+                        },
+                        {
+                            "name": "verticalDegFOV",
+                            "description": "Specifies the vertical FOV in degrees. Default is 45.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "camera",
+                            "description": "Sets the camera instance to be used. If not provided, a new camera will be created.",
+                            "type": "THREE.Camera"
+                        },
+                        {
+                            "name": "cameraNear",
+                            "description": "Sets the camera near to be used in the scene..",
+                            "type": "Float"
+                        },
+                        {
+                            "name": "cameraFar",
+                            "description": "Sets the camera far to be used in the scene.",
+                            "type": "Float"
+                        },
+                        {
+                            "name": "controls",
+                            "description": "Specifies a camera controller (THREE.TrackballControls, THREE.OrbitControls, etc).",
+                            "type": "THREE.Controls"
+                        },
+                        {
+                            "name": "controlsConfig",
+                            "description": "A custon config for the supplied controls.",
+                            "type": "Object"
+                        },
+                        {
+                            "name": "useControls",
+                            "description": "If you need to reuse a camera controls instance, use this param to provide the controls instance.",
+                            "type": "Object"
+                        },
+                        {
+                            "name": "parentType",
+                            "description": "Container type element ('div' or 'window').",
+                            "type": "String"
+                        },
+                        {
+                            "name": "containerId",
+                            "description": "Allows to set an id for the scene.VOneData.container.",
+                            "type": "String"
+                        },
+                        {
+                            "name": "raycastThreshold",
+                            "description": "Sets the scene.VOneData.raycaster threshold for points geometry.",
+                            "type": "Number"
+                        },
+                        {
+                            "name": "useTweenAnimations",
+                            "description": "If this is set to true, tween animations will be available to be used in the scene. Default is false. (Only available for WebGLRenderer).",
+                            "type": "Boolean"
+                        },
+                        {
+                            "name": "glRendererCustomProperties",
+                            "description": "A set of properties to be set on the WebGLRenderer.",
+                            "type": "Object"
+                        },
+                        {
+                            "name": "bodyBGColor",
+                            "description": "Sets the color for the whole canvas for being used as page background color.",
+                            "type": "Hex"
+                        }
+                    ]
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "VOne.SceneManager"
+            },
+            "class": "VOne.SceneCreator"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nDefault images for VOne.",
+            "line": " Resources/defaultImages.js:1"
+        }
+    ]
+}

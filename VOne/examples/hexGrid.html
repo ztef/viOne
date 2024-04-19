@@ -1,0 +1,175 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+	<title>VOne Test</title>
+	
+
+	<script type='text/javascript' src='javascript/libs/three.min.js'></script>
+	<script type='text/javascript' src='javascript/libs/TrackballControls.js'></script>
+	
+
+	<script type='text/javascript' src='../dist/VOne.js'></script>
+</head>
+<body>
+
+	<div id="statusDiv" style="width: 20em; height: 1.5em; background-color: rgba(10, 10, 10, .5); position: fixed; bottom: 5px; left: 5px; padding: 0.5em 2em; color: #eee; font-family: Verdana, Arial;"></div>
+
+	<script type='text/javascript'>
+
+		var sceneCreator = new VOne.SceneCreator();
+
+		
+		scene = sceneCreator.createScene({ controls: THREE.TrackballControls, glRenderer: THREE.WebGLRenderer, bgColor: 0x000077 });
+
+
+		var linesMaterial = new THREE.LineBasicMaterial({ linewidth: 0.1, color: 0xffffff, transparent: true, opacity: 0.8 } );
+
+		
+
+		var shadersCreator = new VOne.ShaderCreator();
+
+		var shader = shadersCreator.createShader(
+			{
+				color: 'color',
+				alpha: 'alpha'
+
+			});
+
+		
+
+		var material = new THREE.ShaderMaterial({ 
+
+			vertexShader: shader.vertexShader,
+			fragmentShader: shader.fragmentShader,
+			uniforms: shader.uniforms,
+
+			blending: THREE.AdditiveBlending,
+			depthTest: true,
+
+			transparent: true
+
+		});
+
+
+		
+		for(var i = 0; i < 7; i++){
+
+
+			var hexGrid = new VOne.HexGrid(-15000, -8000, 15000, 6000, 1200, false);
+
+			console.log(hexGrid);
+
+			var edgesGeometry = hexGrid.generateEdgesGeometry(i * 1000);
+
+
+			hexGrid.generateBufferGeometries(i * 1000)
+
+				.setGeometriesColor(function(v){
+
+					return new THREE.Color('rgb(10, 50, 240)');
+
+				})
+
+				.setGeometriesAlpha(function(v){
+
+					return Math.random();
+				});	
+
+
+			var edges = new THREE.LineSegments ( edgesGeometry, linesMaterial);
+
+
+			scene.add(edges);
+
+
+
+			
+			var gridMesh = new THREE.Mesh(hexGrid.bufferGeometry, material);
+
+			scene.add(gridMesh);
+
+
+
+			var facesCount = hexGrid.shapeGeometry.faces.length;
+
+			var pointsPerFace = hexGrid.pointsCount / facesCount;
+
+			var hexCount = hexGrid.model.length;
+
+			var facesPerHex = facesCount / hexCount;
+
+			
+
+			var model = hexGrid.bufferGeometryModel;
+
+		
+
+			model.setMesh(gridMesh);
+
+			// console.log(hexGrid.whereIs(-1900, 2200));
+			
+			model.setInteraction('onMouseOver', function(el, index){
+
+				var colors = model.getColorArray();
+
+				
+				for(var j = 0; j < facesPerHex; j++){
+
+					var k = j * 9;
+
+					colors[index * pointsPerFace * facesPerHex  + k] = 1;
+					colors[index * pointsPerFace * facesPerHex + 1 + k] = 1;
+					colors[index * pointsPerFace * facesPerHex + 2 + k] = 1;
+					colors[index * pointsPerFace * facesPerHex + 3 + k] = 1;
+					colors[index * pointsPerFace * facesPerHex + 4 + k] = 1;
+					colors[index * pointsPerFace * facesPerHex + 5 + k] = 1;
+					colors[index * pointsPerFace * facesPerHex + 6 + k] = 1;
+					colors[index * pointsPerFace * facesPerHex + 7 + k] = 1;
+					colors[index * pointsPerFace * facesPerHex + 8 + k] = 1;
+
+				}
+
+				model.getGeometry().attributes.color.needsUpdate = true;
+
+				document.getElementById('statusDiv').innerHTML = "Last hex coordinates: " + el.name;
+
+			});
+
+
+			model.setInteraction('onMouseOut', function(el, index){
+
+				var colors = model.getColorArray();
+
+				
+				for(var j = 0; j < facesPerHex; j++){
+
+					var k = j * 9;
+
+					colors[index * pointsPerFace * facesPerHex  + k] = 10 / 255;
+					colors[index * pointsPerFace * facesPerHex + 1 + k] = 50 / 255;
+					colors[index * pointsPerFace * facesPerHex + 2 + k] = 240 / 255;
+					colors[index * pointsPerFace * facesPerHex + 3 + k] = 10 / 255;
+					colors[index * pointsPerFace * facesPerHex + 4 + k] = 50 / 255;
+					colors[index * pointsPerFace * facesPerHex + 5 + k] = 240 / 255;
+					colors[index * pointsPerFace * facesPerHex + 6 + k] = 10 / 255;
+					colors[index * pointsPerFace * facesPerHex + 7 + k] = 50 / 255;
+					colors[index * pointsPerFace * facesPerHex + 8 + k] = 240 / 255;
+
+
+				}
+
+				model.getGeometry().attributes.color.needsUpdate = true;
+
+			});
+
+			scene.registerInteractiveBufferGeometry(model);
+
+		}
+
+
+
+	</script>
+
+</body>
+
+</html>

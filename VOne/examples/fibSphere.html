@@ -1,0 +1,212 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+	<title>VOne - Basic geometries</title>
+
+	<meta name="keywords" content="distributions, particles, shaders">
+
+	<script type='text/javascript' src='javascript/libs/three.min.js'></script>
+	<script type='text/javascript' src='javascript/libs/TrackballControls.js'></script>
+	<script type='text/javascript' src='javascript/libs/dat.gui.min.js'></script>
+
+	<script type='text/javascript' src='../dist/VOne.js'></script>
+
+</head>
+<body>
+
+	<script type='text/javascript'>
+
+		var sc = new VOne.SceneCreator();
+
+		var pointsCount = 5000;
+		var radius = 1000;
+		var size = 100;
+		var irregular = false;
+
+		// crear la escenea. esto regresa un scene manager que permite agregar facilmente objetos a la escena.
+		var scene = sc.createScene({ controls: THREE.TrackballControls, glRenderer: THREE.WebGLRenderer, bgColor: 0x0c141f });
+
+
+		scene.camera.position.setZ(5000);
+
+
+		var positions = new Float32Array(15000);
+
+
+
+
+		var sizes = new Float32Array(5000);
+
+		var colors = new Float32Array(15000);
+
+
+
+		var setSizes = function(size){
+
+			for(var i = 0; i < 15000; i++){
+
+				sizes[i] = size;
+
+			}
+
+			geometry.attributes.size.needsUpdate = true;
+
+		}
+
+
+		var setColors = function(color){
+
+			for(var i = 0; i < pointsCount; i++){
+
+				colors[i * 3] = color.r;
+				colors[i * 3 + 1] = color.g;
+				colors[i * 3 + 2] = color.b;
+
+			}
+
+			geometry.attributes.color.needsUpdate = true;
+
+		}
+
+
+		var setPositions = function(pos){
+
+
+			for(var i = 0; i < pos.length; i++){
+
+				positions[i] = pos[i];
+
+			}
+
+			geometryModel.setGeometryDrawRangeCount(pointsCount);
+
+			geometry.attributes.position.needsUpdate = true;
+
+		}
+
+
+		var redraw = function(){
+
+			var pos = VOne.fibSphere(pointsCount, { x: 0, y: 0, z: 0 }, radius, irregular);
+
+			setPositions(pos);
+
+		}
+
+
+
+		var geometryModel = new VOne.PreparedBufferGeometryModel(5000, [ ]);
+
+
+		var shadersCreator = new VOne.ShaderCreator();
+
+		var shader = shadersCreator.createShader(
+			{
+				color: 'color',
+				size: 'size',
+				points: true,
+				useTexture: 'sprites/whiteSphere.png',
+				// alpha: 'alpha'
+			});
+
+
+
+		var bufferGeometryMaterial = new THREE.ShaderMaterial({ // Generando el material con lo entregado por el shader creator y unas propiedades mas. el transparent es importante para que agarre el alpha. THREE.js escribe mas cosas en los programas del shader, no pasa integro el GLSL que general el shader creator. De ahi que sea importante ponerle el transparent: true (ademas del fondo de la imagen).
+
+			uniforms: shader.uniforms,
+			vertexShader: shader.vertexShader,
+			fragmentShader: shader.fragmentShader,
+
+			blending: THREE.CustomBlending,
+			blendEquation: THREE.AddEquation,
+			blendSrc: THREE.SrcAlphaFactor,
+			blendDst: THREE.SrcAlphaFactor,
+
+			depthTest: true,
+			transparent: true
+			
+		});
+
+
+		var geometry = new THREE.BufferGeometry();
+
+		var color = new THREE.Color();
+
+			color.setHex(0x7dfdfe);
+
+
+		geometry.addAttribute('position', new THREE.BufferAttribute(positions, 3));
+		geometry.addAttribute('color', new THREE.BufferAttribute(colors, 3));
+		geometry.addAttribute('size', new THREE.BufferAttribute(sizes, 1));
+
+
+		setSizes(100);
+
+		setColors(color);
+
+
+			geometryModel.setGeometry(geometry);
+			geometryModel.setPositionArray(positions);
+			geometryModel.setColorArray(colors);
+			geometryModel.setSizeArray(sizes);
+
+
+		var sphere = new THREE.Points(geometry, bufferGeometryMaterial);
+
+		scene.add(sphere);
+
+
+		redraw();
+
+
+		var guiConfig = {
+
+			radius: 500,
+			size: 100,
+			particles: 5000,
+			irregular: false
+
+		};
+
+
+		var gui = new dat.GUI( { width: 500 } );
+
+
+		gui.add(guiConfig, 'radius', 250, 2000).name('Sphere radius').step(50).onChange(function(value){
+
+			radius = value;
+
+			redraw();
+
+		});
+
+
+		gui.add(guiConfig, 'size', 50, 1000).name('point size').step(50).onChange(function(value){
+
+			setSizes(value);
+
+		});
+
+
+		gui.add(guiConfig, 'particles', 300, 5000).name('Particles count').step(100).onChange(function(value){
+
+			pointsCount = value;
+
+			redraw();
+
+		});
+
+
+		gui.add(guiConfig, 'irregular').name('Irregular distribution').onChange(function(value){
+
+			irregular = value;
+
+			redraw();
+
+		});
+
+
+	</script>
+
+</body>
+</html>

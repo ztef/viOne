@@ -1,0 +1,96 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+	<title>VOne FDL graph example</title>
+
+
+	<style>
+		body { margin: 0; }
+	</style>
+	<script type='text/javascript' src='javascript/libs/three.min.js'></script>
+	<script type='text/javascript' src='javascript/libs/TrackballControls.js'></script>
+
+
+	<script type='text/javascript' src='data/graphDataGenerator.js'></script>
+
+	<script type='text/javascript' src='../dist/VOne.js'></script>
+</head>
+<body>
+
+	<script type='text/javascript'>
+
+
+
+		var data, graph, engine, scene;
+
+
+			data = generateGraphData(50, 2);
+
+
+			init();
+
+
+
+		function init(){
+
+
+			// Declarando creador de escenas -->
+			var sceneCreator = new VOne.SceneCreator();
+
+			// Instanciando un creador de escenas con parametros de default + controls + tipo de renderer -->
+			scene = sceneCreator.createScene({ controls: THREE.TrackballControls, glRenderer: THREE.WebGLRenderer, parentType: 'div' });
+
+
+
+			// Creando grafo
+
+			var map = { id: 'index' };
+
+			var graphBuilder = new VOne.GraphBuilder(data, map);
+
+			graph = graphBuilder.buildGraph();
+
+			console.log(graph);
+
+
+			var textureMap = { default: { texturePath: './sprites/whiteSphere.png', color: 0xfae0fa, scale: 50 } };
+
+
+			var geometriesGenerator = new VOne.GraphGeometriesGenerator(graph, textureMap);
+
+			var graphElements = geometriesGenerator.buildGeometries();
+
+			console.log(graphElements);
+
+
+			scene.add(graphElements.nodes);
+
+			scene.add(graphElements.relations);
+
+
+			// console.log(graphElements);
+
+
+			engine = new VOne.ForceDirectedLayoutEngine(graph);
+
+
+
+			var update = function(){
+
+				engine.step();
+
+			};
+
+
+
+			scene.setOnRender(update);
+
+		}
+
+
+
+
+	</script>
+
+</body>
+</html>

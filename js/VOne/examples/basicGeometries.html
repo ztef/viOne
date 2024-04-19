@@ -1,0 +1,132 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+	<title>VOne - Basic geometries</title>
+
+	<meta name="keywords" content="">
+	
+	<script type='text/javascript' src='javascript/libs/three.min.js'></script>
+	<script type='text/javascript' src='javascript/libs/TrackballControls.js'></script>
+
+	<script type='text/javascript' src='../dist/VOne.js'></script>
+</head>
+<body>
+
+	<script type='text/javascript'>
+
+	var sc = new VOne.SceneCreator();
+
+	// crear la escenea. esto regresa un scene manager que permite agregar facilmente objetos a la escena.
+	var scene = sc.createScene({ controls: THREE.TrackballControls, glRenderer: THREE.WebGLRenderer, bgColor: 0x000000 });
+
+
+
+	//// haciendo uso de las funciones de este archivo
+
+	var plane0 = createBasicPlaneMesh(20000, 15000, 0xaaaaff);
+
+	var plane1 = createBasicPlaneMesh(15000, 7500);
+
+
+	
+	addPlane(plane0, 0);
+
+	addPlane(plane1, 7000);
+
+
+	// creando lineas en el primer plano
+	var line1 = create2DLine(-8000, -5000, 3000, 500, 0x111100, plane0);
+
+	var line1a = create2DLine(3000, 500, 8000, -5000, 0x111111, plane0);
+
+
+	// creando lineas en el segundo plano
+	var line2 = create2DLine(200, 200, 3000, 500, 0x111100, plane1);
+
+	var line2a = create2DLine(-5000, -2500, 3000, 500, 0xeeeeee, plane1);
+
+
+	scene.add([line1, line1a, line2, line2a]); // se pueden agregar meshes aislados o arreglos de meshes.
+
+
+
+
+	var circle0 = create2DCircle(700, -700, 6500, 0xffff00, plane0);
+
+	scene.add(circle0);
+
+
+
+	/////// funciones de creacion de objetos 2D
+
+
+	// Crear planos.
+	function createBasicPlaneMesh(width, height, color){
+
+		var plane = new THREE.PlaneBufferGeometry(width, height, 32);
+
+		color = color || 0xff5500;
+
+		var material = new THREE.MeshBasicMaterial( {color: color, side: THREE.DoubleSide} );
+
+		var planeMesh = new THREE.Mesh( plane, material );
+
+		return planeMesh;
+
+	}
+
+
+	//agregar planos a la escena
+	function addPlane(plane, z){
+
+		plane.position.setZ(z);
+		scene.add(plane);
+
+	}
+
+
+	// crear lineas
+	// al final le paso el plano para que sepa a que profundidad pintar la linea.
+	function create2DLine(initX, initY, endX, endY, color, plane){
+
+		var z = plane.position.getComponent(2) + 50; // usamos getComponent para no afectar al vector del plano al momento de sumar.
+
+		var material = new THREE.LineBasicMaterial({ color: color || 0x000000, linewidth: 0.5 });
+
+		var geometry = new THREE.Geometry();
+
+		geometry.vertices.push(
+			new THREE.Vector3(initX, initY, z),
+			new THREE.Vector3(endX, endY, z)
+			);
+
+		var line = new THREE.Line(geometry, material);
+
+		return line;
+
+	}
+
+
+	// Crear circulos
+	function create2DCircle(radius, posX, posY, color, plane){
+
+
+		var position = new THREE.Vector3(posX, posY, plane.position.getComponent(2) + 50);
+
+		var geometry = new THREE.CircleBufferGeometry( radius, 32 );
+
+		var material = new THREE.MeshBasicMaterial( { color: color || 0xffff00 } );
+
+		var circle = new THREE.Mesh( geometry, material );
+
+		circle.position.copy(position);
+
+		return circle;
+
+	}
+
+	</script>
+
+
+</body>
+</html>

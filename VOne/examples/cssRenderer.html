@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>VOne - Basic geometries</title>
+
+    <meta name="keywords" content="">
+
+    <script type='text/javascript' src='javascript/libs/three.min.js'></script>
+    <script type='text/javascript' src='javascript/libs/TrackballControls.js'></script>
+    <script type='text/javascript' src='javascript/libs/CSS3DRenderer.js'></script>
+
+    <script type='text/javascript' src='../dist/VOne.js'></script>
+</head>
+<body>
+    <script>
+
+        var sc = new VOne.SceneCreator();
+
+        var scene = sc.createScene({ width: 800, height: 600, glRenderer: THREE.CSS3DRenderer, controls: THREE.TrackballControls });
+
+        for(var i = 0; i < 66; i++){
+
+            var element = document.createElement('div');
+
+            element.style.backgroundColor = 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')';
+
+            element.style.padding = '1em';
+
+            element.innerHTML = i;
+
+            var objectToAdd = new THREE.CSS3DObject(element);
+
+            objectToAdd.position.x = Math.random() * 800 - 400;
+            objectToAdd.position.y = Math.random() * 800 - 400;
+            objectToAdd.position.z = Math.random() * 400 - 200;
+
+            scene.add(objectToAdd);
+
+        }
+
+
+    </script>
+</body>
+
+</html>

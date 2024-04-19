@@ -1,0 +1,2347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VOne.BackgroundModelGenerator - VOne</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../resources/Logo-VOne-Final.png" title="VOne"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 1.1.1</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/THREE.Mesh.html">THREE.Mesh</a></li>
+                                <li><a href="../classes/VOne.html">VOne</a></li>
+                                <li><a href="../classes/VOne.Animation.html">VOne.Animation</a></li>
+                                <li><a href="../classes/VOne.BackgroundModelGenerator.html">VOne.BackgroundModelGenerator</a></li>
+                                <li><a href="../classes/VOne.BufferGeometryModel.html">VOne.BufferGeometryModel</a></li>
+                                <li><a href="../classes/VOne.CPSBufferGeometriesGenerator.html">VOne.CPSBufferGeometriesGenerator</a></li>
+                                <li><a href="../classes/VOne.DeathSphere.html">VOne.DeathSphere</a></li>
+                                <li><a href="../classes/VOne.GenericBufferGeometriesGenerator.html">VOne.GenericBufferGeometriesGenerator</a></li>
+                                <li><a href="../classes/VOne.GeometryModel.html">VOne.GeometryModel</a></li>
+                                <li><a href="../classes/VOne.Graph.html">VOne.Graph</a></li>
+                                <li><a href="../classes/VOne.GraphEdge.html">VOne.GraphEdge</a></li>
+                                <li><a href="../classes/VOne.GraphNode.html">VOne.GraphNode</a></li>
+                                <li><a href="../classes/VOne.HexGrid.html">VOne.HexGrid</a></li>
+                                <li><a href="../classes/VOne.Label3D.html">VOne.Label3D</a></li>
+                                <li><a href="../classes/VOne.LeapGrabControls.html">VOne.LeapGrabControls</a></li>
+                                <li><a href="../classes/VOne.LogScale.html">VOne.LogScale</a></li>
+                                <li><a href="../classes/VOne.PieSlice.html">VOne.PieSlice</a></li>
+                                <li><a href="../classes/VOne.Polygon.html">VOne.Polygon</a></li>
+                                <li><a href="../classes/VOne.PreparedBufferGeometryModel.html">VOne.PreparedBufferGeometryModel</a></li>
+                                <li><a href="../classes/VOne.RadialDistribution.html">VOne.RadialDistribution</a></li>
+                                <li><a href="../classes/VOne.RelationshipBufferGeometriesGenerator.html">VOne.RelationshipBufferGeometriesGenerator</a></li>
+                                <li><a href="../classes/VOne.SceneCreator.html">VOne.SceneCreator</a></li>
+                                <li><a href="../classes/VOne.Selection.html">VOne.Selection</a></li>
+                                <li><a href="../classes/VOne.ShaderCreator.html">VOne.ShaderCreator</a></li>
+                                <li><a href="../classes/VOne.ThreeSceneManager.html">VOne.ThreeSceneManager</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1>VOne.BackgroundModelGenerator Class</h1>
+<div class="box meta">
+
+        <div class="extends">
+            Extends <a href="../classes/VOne.PreparedBufferGeometryModel.html" class="crosslink">VOne.PreparedBufferGeometryModel</a>
+        </div>
+
+
+
+</div>
+
+
+<div class="box intro">
+    <p>A tool for creating data models with raw data types and generate position, color, size and alpha arrays to be used with a THREE.BufferGeometry.</p><p>The data model can be created from several records arrays. This is useful when working with partial data loads and/or large data sets.</p><p>Processing position, color, alpha and size setting functions and appending records to the data model is done in a separate background thread. Therefore the class name.</p>
+</div>
+
+    <div class="constructor">
+        <h2>Constructor</h2>
+<div id="method_VOne.BackgroundModelGenerator" class="method item">
+    <h3 class="name"><code>VOne.BackgroundModelGenerator</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>recordsCount</code>
+                </li>
+                <li class="arg">
+                        <code>model</code>
+                </li>
+                <li class="arg">
+                        <code>recordsPartialDeliverCount</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">recordsCount</code>
+                        <span class="type">Int</span>
+
+
+                    <div class="param-description">
+                        <p>The total records to be expected to manage. </p><p>This parameter will reserve the exact memory ammount to handle those records, no more. So, if you set this param to be smaller than your final recordset, you'll be troubled.</p>
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">model</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>The properties model that each record will have and you'll need to use.</p><p>This param must have the following format: </p><p>&nbsp; &nbsp; { propertyName: array_type, propertyName: array_type ... propertyName: array_type } </p><p>where propertyName is the property name to use from each record and array type is one of the following list: </p><p><ul><li>Int8Array</li><li>Uint8Array</li><li>Uint8ClampedArray</li><li>Int16Array</li><li>Uint16Array</li><li>Int32Array</li><li>Uint32Array</li><li>Float32Array</li><li>Float64Array</li></ul></p><p>Each one of these array types must correspond to the type of the value expected for each field/property from the recordset. For more information about each one of these array types visit <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray">Typed arrays docs</a> </p>
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">recordsPartialDeliverCount</code>
+                        <span class="type">Int</span>
+
+
+                    <div class="param-description">
+                        <p>Indicates the amount of records that will be passed to the background thread each time when working with multiple partial records loading. If not set, the recordsCount value will be used.</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+    </div>
+
+<div id="classdocs" class="tabview">
+    <ul class="api-class-tabs">
+        <li class="api-class-tab index"><a href="#index">Index</a></li>
+
+            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
+    </ul>
+
+    <div>
+        <div id="index" class="api-class-tabpanel index">
+            <h2 class="off-left">Item Index</h2>
+
+                <div class="index-section methods">
+                    <h3>Methods</h3>
+
+                    <ul class="index-list methods extends">
+                            <li class="index-item method inherited">
+                                <a href="#method_appendRecords">appendRecords</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_getAlphaArray">getAlphaArray</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_getColorArray">getColorArray</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_getDataModel">getDataModel</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_getGeometry">getGeometry</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_getMesh">getMesh</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_getPositionArray">getPositionArray</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_getSizeArray">getSizeArray</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_init">init</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_processRecords">processRecords</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_setAlpha">setAlpha</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_setAlphaArray">setAlphaArray</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_setAlphaScript">setAlphaScript</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_setAnimating">setAnimating</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_setColor">setColor</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_setColorArray">setColorArray</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_setColorScript">setColorScript</a>
+
+                            </li>
+                            <li class="index-item method inherited inherited">
+                                <a href="#method_setDataModel">setDataModel</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_setExtrasForWorker">setExtrasForWorker</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_setGeometry">setGeometry</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_setGeometryDrawRangeCount">setGeometryDrawRangeCount</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_setInteraction">setInteraction</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_setMesh">setMesh</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_setPosition">setPosition</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_setPositionArray">setPositionArray</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_setPositionScript">setPositionScript</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_setSize">setSize</a>
+
+                            </li>
+                            <li class="index-item method inherited">
+                                <a href="#method_setSizeArray">setSizeArray</a>
+
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_setSizeScript">setSizeScript</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+                <div class="index-section properties">
+                    <h3>Properties</h3>
+
+                    <ul class="index-list properties extends">
+                            <li class="index-item property inherited">
+                                <a href="#property_alphaArray">alphaArray</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_alphasProgram">alphasProgram</a>
+
+                            </li>
+                            <li class="index-item property inherited">
+                                <a href="#property_animating">animating</a>
+
+                            </li>
+                            <li class="index-item property inherited">
+                                <a href="#property_colorArray">colorArray</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_colorsProgram">colorsProgram</a>
+
+                            </li>
+                            <li class="index-item property inherited">
+                                <a href="#property_dataModel">dataModel</a>
+
+                            </li>
+                            <li class="index-item property inherited">
+                                <a href="#property_geometry">geometry</a>
+
+                            </li>
+                            <li class="index-item property inherited">
+                                <a href="#property_maxVerticesNumber">maxVerticesNumber</a>
+
+                            </li>
+                            <li class="index-item property inherited">
+                                <a href="#property_mesh">mesh</a>
+
+                            </li>
+                            <li class="index-item property inherited">
+                                <a href="#property_positionArray">positionArray</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_positionsProgram">positionsProgram</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_recordsCount">recordsCount</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_recordsPartialDeliverCount">recordsPartialDeliverCount</a>
+
+                            </li>
+                            <li class="index-item property inherited">
+                                <a href="#property_setAlphaFor">setAlphaFor</a>
+
+                            </li>
+                            <li class="index-item property inherited">
+                                <a href="#property_setColorFor">setColorFor</a>
+
+                            </li>
+                            <li class="index-item property inherited">
+                                <a href="#property_setPositionFor">setPositionFor</a>
+
+                            </li>
+                            <li class="index-item property inherited">
+                                <a href="#property_setSizeFor">setSizeFor</a>
+
+                            </li>
+                            <li class="index-item property inherited">
+                                <a href="#property_sizeArray">sizeArray</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_sizesProgram">sizesProgram</a>
+
+                            </li>
+                            <li class="index-item property">
+                                <a href="#property_worker">worker</a>
+
+                            </li>
+                    </ul>
+                </div>
+
+
+        </div>
+
+            <div id="methods" class="api-class-tabpanel">
+                <h2 class="off-left">Methods</h2>
+
+<div id="method_appendRecords" class="method item inherited">
+    <h3 class="name"><code>appendRecords</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>Records</code>
+                </li>
+                <li class="arg">
+                        <code>processRecordsAfterAppend</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.PreparedBufferGeometryModel.html#method_appendRecords">VOne.PreparedBufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Appends new records to the data model.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">Records</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                        to be appended to the dataModel.
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">processRecordsAfterAppend</code>
+                        <span class="type">Boolean</span>
+
+
+                    <div class="param-description">
+                        If set to true, the records will be processed using the provided methods for setting their position, color, size and/or alpha and the geometry will be updated.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_getAlphaArray" class="method item inherited">
+    <h3 class="name"><code>getAlphaArray</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Float32Array</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_getAlphaArray">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Gets the alpha array from the model.
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Float32Array</span>:
+                    The array to be used for geometries/points' alpha setting.
+            </div>
+        </div>
+
+
+</div>
+<div id="method_getColorArray" class="method item inherited">
+    <h3 class="name"><code>getColorArray</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Float32Array</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_getColorArray">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Gets the color array from the model.
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Float32Array</span>:
+                    The array to be used for geometries/points' color setting.
+            </div>
+        </div>
+
+
+</div>
+<div id="method_getDataModel" class="method item inherited">
+    <h3 class="name"><code>getDataModel</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Array</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_getDataModel">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Gets the data model.
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Array</span>:
+                    The data model.
+            </div>
+        </div>
+
+
+</div>
+<div id="method_getGeometry" class="method item inherited">
+    <h3 class="name"><code>getGeometry</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">THREE.BufferGeometry</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_getGeometry">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Gets the geometry.
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">THREE.BufferGeometry</span>:
+                    The model's geometry.
+            </div>
+        </div>
+
+
+</div>
+<div id="method_getMesh" class="method item inherited">
+    <h3 class="name"><code>getMesh</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">THREE.Object3D</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_getMesh">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Gets the Scene object (usually a THREE.Points) to be used with the other properties set.
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">THREE.Object3D</span>:
+                    mesh/points The buffer geometry scene object.
+            </div>
+        </div>
+
+
+</div>
+<div id="method_getPositionArray" class="method item inherited">
+    <h3 class="name"><code>getPositionArray</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Float32Array</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_getPositionArray">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Gets the position array from the model.
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Float32Array</span>:
+                    The array to be used for geometries/points' position setting.
+            </div>
+        </div>
+
+
+</div>
+<div id="method_getSizeArray" class="method item inherited">
+    <h3 class="name"><code>getSizeArray</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Float32Array</span>
+        </span>
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_getSizeArray">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Gets the size array from the model.
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Float32Array</span>:
+                    The array to be used for geometries/points' size setting.
+            </div>
+        </div>
+
+
+</div>
+<div id="method_init" class="method item">
+    <h3 class="name"><code>init</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Initializes the background thread with the provided scripts for processing the records and reserves the needed amount of memory for storing all the needed properties and records.</p>
+
+    </div>
+
+
+
+
+</div>
+<div id="method_processRecords" class="method item">
+    <h3 class="name"><code>processRecords</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>records</code>
+                </li>
+                <li class="arg">
+                        <code>Initial</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+            <p>Inherited from
+            <a href="../classes/VOne.PreparedBufferGeometryModel.html#method_processRecords">
+                VOne.PreparedBufferGeometryModel
+            </a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Appends records to the thread's data model and processes them with the position, color, size and alpha script provided before initialization.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">records</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                        <p>The array of records to be appended to the model.</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">Initial</code>
+                        <span class="type">Offset</span>
+
+
+                    <div class="param-description">
+                        <p>position in the thread's array for the appended records.</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setAlpha" class="method item inherited">
+    <h3 class="name"><code>setAlpha</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>f</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.PreparedBufferGeometryModel.html#method_setAlpha">VOne.PreparedBufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Sets a function or default value to set the alpha value for each model's element.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">f</code>
+                        <span class="type">Function |  | float</span>
+
+
+                    <div class="param-description">
+                        The method to set the alpha for each model's element. Must return a float value.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setAlphaArray" class="method item inherited">
+    <h3 class="name"><code>setAlphaArray</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>alphaArray</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_setAlphaArray">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Sets an alpha array for the model.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">alphaArray</code>
+                        <span class="type">Float32Array</span>
+
+
+                    <div class="param-description">
+                        The array to be used for geometries/points' alpha.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setAlphaScript" class="method item">
+    <h3 class="name"><code>setAlphaScript</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>alphaScript</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Sets a function implementation which will assign a color for each dataset element.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">alphaScript</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>The method to set alpha for each element on the dataset <string>in a string format</strong>. Must return an float value where 0 &lt; value &lt;= 1. The method will receive the record from the dataset and the corresponding index as params. <br/><p>Example</p><p>	myBackgroundModelGenerator.setAlphaScript(&quot;return record.amount * index * 0.5; &quot;); </p><p>Because of the nature of threads, global and window variables won't be available in the scope of this function.</p></p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setAnimating" class="method item inherited">
+    <h3 class="name"><code>setAnimating</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>animating</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_setAnimating">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Sets the animating flag which indicates that some change is happening in the data model's values.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">animating</code>
+                        <span class="type">Boolean</span>
+
+
+                    <div class="param-description">
+                        Animating value.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setColor" class="method item inherited">
+    <h3 class="name"><code>setColor</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>f</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.PreparedBufferGeometryModel.html#method_setColor">VOne.PreparedBufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Sets a function or default value to set color for each model's element.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">f</code>
+                        <span class="type">Function |  | THREE.Color</span>
+
+
+                    <div class="param-description">
+                        The method to set the color for each model's element. Must return a THREE.Color object.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setColorArray" class="method item inherited">
+    <h3 class="name"><code>setColorArray</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>colorArray</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_setColorArray">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Sets a color array for the model.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">colorArray</code>
+                        <span class="type">Float32Array</span>
+
+
+                    <div class="param-description">
+                        The array to be used for geometries/points' color setting.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setColorScript" class="method item">
+    <h3 class="name"><code>setColorScript</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>colorScript</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Sets a function implementation which will assign a color for each dataset element.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">colorScript</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>The method to set position for each element on the dataset <string>in a string format</strong>. Must return an object with r, g and b properties where 0 &lt; r, g, b &lt;= 1. The method will receive the record from the dataset and the corresponding index as params. <br/><p>Example</p><p>	myBackgroundModelGenerator.setColorScript(&quot;return { r: Math.random(), g: record.amount * 13 / 66, z: index * 0.00666 } &quot;); </p><p>Because of the nature of threads, global and window variables won't be available in the scope of this function.</p></p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setDataModel" class="method item inherited">
+    <h3 class="name"><code>setDataModel</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>model</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+            <p>Inherited from
+            <a href="../classes/VOne.BufferGeometryModel.html#method_setDataModel">
+                VOne.BufferGeometryModel
+            </a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Sets the model to work with.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">model</code>
+                        <span class="type">Array</span>
+
+
+                    <div class="param-description">
+                        The model to be set.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setExtrasForWorker" class="method item">
+    <h3 class="name"><code>setExtrasForWorker</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>extras</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Sets an extra object in the worker in case you need it for operations to set positions, colors, etc. It will be available as a variable named extras. Must be called after init() method.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">extras</code>
+                        <span class="type">Object</span>
+
+
+                    <div class="param-description">
+                        <p>An object to be available as 'extras'.</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setGeometry" class="method item inherited">
+    <h3 class="name"><code>setGeometry</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>geometry</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_setGeometry">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Sets the Geometry to be used with the other properties set.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">geometry</code>
+                        <span class="type">THREE.BufferGeometry</span>
+
+
+                    <div class="param-description">
+                        The buffer geometry.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setGeometryDrawRangeCount" class="method item inherited">
+    <h3 class="name"><code>setGeometryDrawRangeCount</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>count</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.PreparedBufferGeometryModel.html#method_setGeometryDrawRangeCount">VOne.PreparedBufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Sets the number of records / vertices to be rendered.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">count</code>
+                        <span class="type">Int</span>
+
+
+                    <div class="param-description">
+                        Number of vertices to render.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setInteraction" class="method item inherited">
+    <h3 class="name"><code>setInteraction</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>eventName</code>
+                </li>
+                <li class="arg">
+                        <code>action</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_setInteraction">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Allows to define actions to be executed when a point cloud element is intersected.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">eventName</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        The name of the event to react to (mouse over, mouse out, mouse click).
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">action</code>
+                        <span class="type">Function</span>
+
+
+                    <div class="param-description">
+                        The action(s) to be executed when the corresponding event is triggered. The function will receive two params. First one is the datamodel object corresponding to the intersected scene object, the second will be the datamodel object index. <br/><p>Example:</p><p>&emsp;geometryModel.setInteraction('onMouseOver', function(element, index){<br/> &emsp;&emsp;      // Do watever you want with the element and / or the model based on the index supplied.  <br/>&emsp;}); </p>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setMesh" class="method item inherited">
+    <h3 class="name"><code>setMesh</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>geometry</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_setMesh">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Sets the Scene object (usually a THREE.Points) to be used with the other properties set.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">geometry</code>
+                        <span class="type">THREE.Points</span>
+
+
+                    <div class="param-description">
+                        The buffer geometry scene object.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setPosition" class="method item inherited">
+    <h3 class="name"><code>setPosition</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>f</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.PreparedBufferGeometryModel.html#method_setPosition">VOne.PreparedBufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Sets a function or default value to set position for each model's element.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">f</code>
+                        <span class="type">Function |  | THREE.Vector3</span>
+
+
+                    <div class="param-description">
+                        The method to set position for each model's element. Must return a THREE.Vector3 object.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setPositionArray" class="method item inherited">
+    <h3 class="name"><code>setPositionArray</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>positionArray</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_setPositionArray">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Sets a position array for the model.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">positionArray</code>
+                        <span class="type">Float32Array</span>
+
+
+                    <div class="param-description">
+                        The array to be used for geometries/points' position.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setPositionScript" class="method item">
+    <h3 class="name"><code>setPositionScript</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>positionScript</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Sets a function implementation which will assign a position for each dataset element.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">positionScript</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>The method to set position for each element on the dataset <string>in a string format</strong>. Must return an object with x, y and z properties. The method will receive the record from the dataset and the corresponding index as params. <br/><p>Example</p><p>	myBackgroundModelGenerator.setPositionScript(&quot;return { x: Math.random(), y: record.amount * 13, z: index * 666 } &quot;); </p><p>Because of the nature of threads, global and window variables won't be available in the scope of this function.</p></p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setSize" class="method item inherited">
+    <h3 class="name"><code>setSize</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>f</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.PreparedBufferGeometryModel.html#method_setSize">VOne.PreparedBufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Sets a function or default value to set the size for each model's element.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">f</code>
+                        <span class="type">Function |  | float</span>
+
+
+                    <div class="param-description">
+                        The method to set the size for each model's element. Must return a float value.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setSizeArray" class="method item inherited">
+    <h3 class="name"><code>setSizeArray</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>sizeArray</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#method_setSizeArray">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        Sets a size array for the model.
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">sizeArray</code>
+                        <span class="type">Float32Array</span>
+
+
+                    <div class="param-description">
+                        The array to be used for geometries/points' size.
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+<div id="method_setSizeScript" class="method item">
+    <h3 class="name"><code>setSizeScript</code></h3>
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>sizeScript</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Sets a function implementation which will assign a color for each dataset element.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">sizeScript</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>The method to set position for each element on the dataset <string>in a string format</strong>. Must return an float value. The method will receive the record from the dataset and the corresponding index as params. <br/><p>Example</p><p>	myBackgroundModelGenerator.setSizeScript(&quot;return record.amount * index * 0.5; &quot;); </p><p>Because of the nature of threads, global and window variables won't be available in the scope of this function.</p></p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+
+
+</div>
+            </div>
+
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
+
+<div id="property_alphaArray" class="property item inherited">
+    <h3 class="name"><code>alphaArray</code></h3>
+    <span class="type">Float32Array</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#property_alphaArray">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Alpha array for its use in a THREE.BufferGeometry object.
+    </div>
+
+
+
+</div>
+<div id="property_alphasProgram" class="property item">
+    <h3 class="name"><code>alphasProgram</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>String containing the script that should be used to set alpha properties for each record. This is set via setAlphaScript. This property has been exposed in case you need to set other than default behaviour for setting alpha.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_animating" class="property item inherited">
+    <h3 class="name"><code>animating</code></h3>
+    <span class="type">Boolean</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#property_animating">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Flag that indicates that some change is happening in the data model's values.
+    </div>
+
+
+
+</div>
+<div id="property_colorArray" class="property item inherited">
+    <h3 class="name"><code>colorArray</code></h3>
+    <span class="type">Float32Array</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#property_colorArray">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Color array for its use in a THREE.BufferGeometry object.
+    </div>
+
+
+
+</div>
+<div id="property_colorsProgram" class="property item">
+    <h3 class="name"><code>colorsProgram</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>String containing the script that should be used to set color properties for each record. This is set via setColorScript. This property has been exposed in case you need to set other than default behaviour for setting colors.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_dataModel" class="property item">
+    <h3 class="name"><code>dataModel</code></h3>
+    <span class="type">Proxy</span>
+
+
+
+
+
+    <div class="meta">
+            <p>Inherited from
+            <a href="../classes/VOne.BufferGeometryModel.html#property_dataModel">
+                VOne.BufferGeometryModel
+            </a>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Data model to be used with a THREE.BufferGeometry object. Updated each time that records are added via processRecords method.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_geometry" class="property item inherited">
+    <h3 class="name"><code>geometry</code></h3>
+    <span class="type">THREE.BufferGeometry</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#property_geometry">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        The model BufferGeometry object.
+    </div>
+
+
+
+</div>
+<div id="property_maxVerticesNumber" class="property item inherited">
+    <h3 class="name"><code>maxVerticesNumber</code></h3>
+    <span class="type">Int</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.PreparedBufferGeometryModel.html#property_maxVerticesNumber">VOne.PreparedBufferGeometryModel</a>:
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Max number of vertices that the BufferGeometry will be able to manage.
+    </div>
+
+
+
+</div>
+<div id="property_mesh" class="property item inherited">
+    <h3 class="name"><code>mesh</code></h3>
+    <span class="type">THREE.Points</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#property_mesh">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Scene Object (THREE.Points o any other buffer geometry).
+    </div>
+
+
+
+</div>
+<div id="property_positionArray" class="property item inherited">
+    <h3 class="name"><code>positionArray</code></h3>
+    <span class="type">Float32Array</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#property_positionArray">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Position array for its use in a THREE.BufferGeometry object.
+    </div>
+
+
+
+</div>
+<div id="property_positionsProgram" class="property item">
+    <h3 class="name"><code>positionsProgram</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>String containing the script that should be used to set positions for each record. This is set via setPositionScript. This property has been exposed in case you need to set other than default behaviour for setting positions.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_recordsCount" class="property item">
+    <h3 class="name"><code>recordsCount</code></h3>
+    <span class="type">Int</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Max number of records to manage.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_recordsPartialDeliverCount" class="property item">
+    <h3 class="name"><code>recordsPartialDeliverCount</code></h3>
+    <span class="type">Int</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>Amount of records to send to the thread to process in case of two or more partial record loads.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_setAlphaFor" class="property item inherited">
+    <h3 class="name"><code>setAlphaFor</code></h3>
+    <span class="type">Function | float</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.PreparedBufferGeometryModel.html#property_setAlphaFor">VOne.PreparedBufferGeometryModel</a>:
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Function/value to be executed/applied for setting alpha value for the corresponding model element vertex.
+    </div>
+
+
+
+</div>
+<div id="property_setColorFor" class="property item inherited">
+    <h3 class="name"><code>setColorFor</code></h3>
+    <span class="type">Function | THREE.Color</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.PreparedBufferGeometryModel.html#property_setColorFor">VOne.PreparedBufferGeometryModel</a>:
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Function/value to be executed/applied for setting color values for the corresponding model element vertex.
+    </div>
+
+
+
+</div>
+<div id="property_setPositionFor" class="property item inherited">
+    <h3 class="name"><code>setPositionFor</code></h3>
+    <span class="type">Function | THREE.Vector3</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.PreparedBufferGeometryModel.html#property_setPositionFor">VOne.PreparedBufferGeometryModel</a>:
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Function/value to be executed/applied for setting position values for the corresponding model element vertex.
+    </div>
+
+
+
+</div>
+<div id="property_setSizeFor" class="property item inherited">
+    <h3 class="name"><code>setSizeFor</code></h3>
+    <span class="type">Function | float</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.PreparedBufferGeometryModel.html#property_setSizeFor">VOne.PreparedBufferGeometryModel</a>:
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Function/value to be executed/applied for setting size value for the corresponding model element vertex.
+    </div>
+
+
+
+</div>
+<div id="property_sizeArray" class="property item inherited">
+    <h3 class="name"><code>sizeArray</code></h3>
+    <span class="type">Float32Array</span>
+
+
+
+
+
+    <div class="meta">
+                <p>Inherited from
+                <a href="../classes/VOne.BufferGeometryModel.html#property_sizeArray">VOne.BufferGeometryModel</a>:
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        Size array for its use in a THREE.BufferGeometry object.
+    </div>
+
+
+
+</div>
+<div id="property_sizesProgram" class="property item">
+    <h3 class="name"><code>sizesProgram</code></h3>
+    <span class="type">String</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>String containing the script that should be used to set size properties for each record. This is set via setSizeScript. This property has been exposed in case you need to set other than default behaviour for setting sizes.</p>
+
+    </div>
+
+
+
+</div>
+<div id="property_worker" class="property item">
+    <h3 class="name"><code>worker</code></h3>
+    <span class="type">Worker</span>
+
+
+
+
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+    </div>
+
+    <div class="description">
+        <p>The background thread program. Ideally you won't need to interact with or modify it.</p>
+
+    </div>
+
+
+
+</div>
+            </div>
+
+
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>
