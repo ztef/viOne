@@ -7,8 +7,8 @@
 
 */
 
-import vi_Map from '/front/viOne/geo/vi_map.js'; 
-import { decode, encode } from "/front/viOne/js/@googlemaps/polyline-codec/dist/index.esm.js";
+import vi_Map from './vi_map.js'; 
+import { decode, encode } from "/libs/@googlemaps/polyline-codec/dist/index.esm.js";
  
 
 
